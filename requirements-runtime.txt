@@ -1,0 +1,14 @@
+# Existing project environment uses CUDA PyTorch 2.8.0 and matching torchaudio.
+# Install an appropriate PyTorch build separately when setting up a new machine.
+fastapi
+uvicorn
+python-multipart
+pandas
+numpy
+scipy
+huggingface-hub
+openai-whisper==20250625
+speechbrain==1.1.1
+soundfile==0.14.0
+librosa==1.0.0
+truststore==0.10.4

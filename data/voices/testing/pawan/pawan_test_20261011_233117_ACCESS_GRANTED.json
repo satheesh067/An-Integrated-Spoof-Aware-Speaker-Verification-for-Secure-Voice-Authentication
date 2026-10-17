@@ -1,0 +1,60 @@
+{
+  "decision": "ACCESS_GRANTED",
+  "verdict_type": "AUTHENTICATED",
+  "claimed_user": "pawan",
+  "fused_score": 3.1789,
+  "fusion_threshold": 0.5052,
+  "speaker_score": 0.4396,
+  "speaker_threshold": 0.3237,
+  "speaker_matched": true,
+  "spoof_score": 6.014,
+  "spoof_threshold": -4.0694,
+  "spoof_passed": true,
+  "challenge_status": {
+    "passed": true,
+    "target_phrase": "cool hill 28",
+    "transcription": "Cool hill twenty-eight.",
+    "word_match_pct": 100.0,
+    "number_matched": true,
+    "matched_words": [
+      "cool",
+      "hill",
+      "28"
+    ],
+    "missing_words": [],
+    "asr_latency_ms": 784.04,
+    "asr_model": "small.en",
+    "asr_decoding": "beam5_temperature0_fp32",
+    "reason": "Challenge passed: Spoken phrase and security number verified."
+  },
+  "reasons": [
+    "Authentication successful: Fused SASV decision score (3.179) meets operational threshold (0.505). [ASV similarity: 0.440, CM score: 6.014]"
+  ],
+  "telemetry": {
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "calibration_status": "EXPERIMENTAL_PILOT_ONLY",
+    "calibration_source": "experimental_pilot_live_audio",
+    "ecapa_latency_ms": 45.63,
+    "aasist_latency_ms": 54.16,
+    "asr_latency_ms": 784.04,
+    "total_latency_ms": 887.87,
+    "peak_vram_mb": 1072.24,
+    "audio_metadata": {
+      "original_sr": 16000,
+      "target_sr": 16000,
+      "duration_sec": 4.18,
+      "rms_energy": 0.0127,
+      "peak_amplitude": 0.097,
+      "is_clipped": false,
+      "sample_rate": 16000,
+      "duration_seconds": 4.18,
+      "preprocessing": "mono_16khz_peak_0.95_v1",
+      "normalization_gain": 9.795342983008181
+    }
+  },
+  "calibration_status": "EXPERIMENTAL_PILOT_ONLY",
+  "calibration_source": "experimental_pilot_live_audio",
+  "saved_probe_path": "D:\\S_NLP\\Integrated Spoof-Aware Speaker Verification for Secure Voice Authentication\\data\\voices\\testing\\pawan\\pawan_test_20261011_233117_ACCESS_GRANTED.wav",
+  "enforced_policy": "strict_security"
+}

@@ -1,0 +1,10 @@
+{
+  "source": "data\\voices\\enrolled\\satheesh\\satheesh_enroll_20261011_210347_0.wav",
+  "matched_enrollment_files": [
+    "data\\voices\\enrolled\\satheesh\\satheesh_enroll_20261011_210347_0.wav",
+    "data\\voices\\enrolled\\satheesh\\satheesh_enroll_20261011_210347_1.wav",
+    "data\\voices\\enrolled\\satheesh\\satheesh_enroll_20261011_210347_2.wav"
+  ],
+  "template_max_abs_error": 2.2843480110168457e-05,
+  "cm_and_rms_match": true
+}

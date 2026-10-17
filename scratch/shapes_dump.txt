@@ -1,0 +1,217 @@
+
+--- Slide 1 ---
+Shape 0: name=Image 0, type=PICTURE (13)
+  [PICTURE] format=jpg, size=347098 bytes
+Shape 1: name=Text 0, type=AUTO_SHAPE (1)
+  [TEXT] Secure Biometric Voice Authentication Using NLP-Based Speaker Verification and Anti-Spoofing
+Shape 2: name=Text 1, type=AUTO_SHAPE (1)
+  [TEXT] Review 2
+Shape 3: name=Text 2, type=AUTO_SHAPE (1)
+  [TEXT] Pallli Pavan Kumar — 23MID0181
+  [TEXT] Venkata Sateesh M — 23MID0179
+  [TEXT] Mohammed Irfanulla N — 23MID0090
+  [TEXT] Saswat Subhang — 23MID0075
+
+--- Slide 2 ---
+Shape 0: name=Image 0, type=PICTURE (13)
+  [PICTURE] format=jpg, size=408678 bytes
+Shape 1: name=Text 0, type=AUTO_SHAPE (1)
+  [TEXT] Threat Landscape & Limitations of Conventional ASV
+Shape 2: name=Shape 1, type=AUTO_SHAPE (1)
+Shape 3: name=Text 2, type=AUTO_SHAPE (1)
+  [TEXT] Threat Taxonomy
+Shape 4: name=Text 3, type=AUTO_SHAPE (1)
+  [TEXT] • Acoustic replay attacks (loudspeaker playback with channel degradations).
+  [TEXT] • Parametric and neural TTS synthesis that preserves linguistic content but alters prosody.
+  [TEXT] • Voice conversion (latent identity manipulation) targeting speaker embeddings.
+  [TEXT] • Zero‑day / unseen neural vocoder attacks with new artifact modalities.
+Shape 5: name=Shape 4, type=AUTO_SHAPE (1)
+Shape 6: name=Text 5, type=AUTO_SHAPE (1)
+  [TEXT] Architectural Gaps
+Shape 7: name=Text 6, type=AUTO_SHAPE (1)
+  [TEXT] • Disjoint pipelines: ASV and countermeasure (CM) modules trained and thresholded independently, preventing joint optimisation.
+  [TEXT] • Static decision boundaries: global scalar thresholds break under non‑stationary noise, codec mismatch (Opus/AAC/MP3), and microphone variability.
+  [TEXT] • Limited generalisability to unseen vocoders and combined multi‑vector attacks.
+
+--- Slide 3 ---
+Shape 0: name=Text 0, type=AUTO_SHAPE (1)
+  [TEXT] End-to-End System Architecture & Workflow
+Shape 1: name=Image 0, type=PICTURE (13)
+  [PICTURE] format=png, size=95503 bytes
+Shape 2: name=Text 1, type=AUTO_SHAPE (1)
+  [TEXT] Decision Boundary
+Shape 3: name=Text 2, type=AUTO_SHAPE (1)
+  [TEXT] Fusion & Bayesian Core
+Shape 4: name=Text 3, type=AUTO_SHAPE (1)
+  [TEXT] Dual‑Stream Features
+Shape 5: name=Text 4, type=AUTO_SHAPE (1)
+  [TEXT] Input & Channel
+Shape 6: name=Text 5, type=AUTO_SHAPE (1)
+  [TEXT] The diagram defines layered processing: (1) capture & channel augmentation, (2) parallel feature streams for identity/authenticity/liveness, (3) joint tensor interaction and Bayesian score calibration, (4) posterior‑risk decision policy.
+
+--- Slide 4 ---
+Shape 0: name=Image 0, type=PICTURE (13)
+  [PICTURE] format=jpg, size=416556 bytes
+Shape 1: name=Text 0, type=AUTO_SHAPE (1)
+  [TEXT] Identity Verification — ECAPA‑TDNN
+Shape 2: name=Text 1, type=AUTO_SHAPE (1)
+  [TEXT] Model components: Res2Net blocks, Squeeze‑and‑Excitation channel attention, multi‑layer aggregation and dense temporal propagation. Produces 192‑D x‑vectors robust to channel noise.
+Shape 3: name=Shape 2, type=AUTO_SHAPE (1)
+Shape 4: name=Text 3, type=AUTO_SHAPE (1)
+  [TEXT] Key Mechanisms
+Shape 5: name=Text 4, type=AUTO_SHAPE (1)
+  [TEXT] SE attention rescales channels to suppress non‑speaker variance.
+  [TEXT] Temporal aggregation concatenates hierarchical representations for stability.
+Shape 6: name=Shape 5, type=AUTO_SHAPE (1)
+Shape 7: name=Text 6, type=AUTO_SHAPE (1)
+  [TEXT] Scoring
+Shape 8: name=Text 7, type=AUTO_SHAPE (1)
+  [TEXT] Length‑normalised cosine similarity between enrol and probe embeddings:
+Shape 9: name=Image 1, type=PICTURE (13)
+  [PICTURE] format=png, size=34844 bytes
+
+--- Slide 5 ---
+Shape 0: name=Image 0, type=PICTURE (13)
+  [PICTURE] format=jpg, size=396846 bytes
+Shape 1: name=Text 0, type=AUTO_SHAPE (1)
+  [TEXT] Anti‑Spoofing Countermeasure — AASIST
+Shape 2: name=Text 1, type=AUTO_SHAPE (1)
+  [TEXT] AASIST formulates spectro‑temporal input as a heterogeneous graph; attention weights capture temporal discontinuities and vocoder artifacts (phase anomalies, high‑frequency roll‑offs).
+Shape 3: name=Image 1, type=PICTURE (13)
+  [PICTURE] format=png, size=4556 bytes
+Shape 4: name=Text 2, type=AUTO_SHAPE (1)
+  [TEXT] Graph Formulation
+Shape 5: name=Text 3, type=AUTO_SHAPE (1)
+  [TEXT] Nodes: time‑frequency patches; edges: spectral adjacency & temporal transitions; attention learns cross‑modal artifact signatures.
+Shape 6: name=Image 2, type=PICTURE (13)
+  [PICTURE] format=png, size=4567 bytes
+Shape 7: name=Text 4, type=AUTO_SHAPE (1)
+  [TEXT] Output
+Shape 8: name=Text 5, type=AUTO_SHAPE (1)
+  [TEXT] CM produces a logit / calibrated probability
+Shape 9: name=Image 3, type=PICTURE (13)
+  [PICTURE] format=png, size=14132 bytes
+Shape 10: name=Text 6, type=AUTO_SHAPE (1)
+  [TEXT] denoting naturalness; thresholding combined with fusion reduces false accepts to spoofed inputs.
+
+--- Slide 6 ---
+Shape 0: name=Image 0, type=PICTURE (13)
+  [PICTURE] format=jpg, size=95031 bytes
+Shape 1: name=Text 0, type=AUTO_SHAPE (1)
+  [TEXT] Dynamic Liveness Verification — Whisper ASR
+Shape 2: name=Text 1, type=AUTO_SHAPE (1)
+  [TEXT] Real‑time, server‑generated challenge‑response using random alphanumeric or phonetic passphrases per transaction. Requires live articulation and low latency decoding.
+Shape 3: name=Text 2, type=AUTO_SHAPE (1)
+  [TEXT] 01
+Shape 4: name=Shape 3, type=AUTO_SHAPE (1)
+Shape 5: name=Text 4, type=AUTO_SHAPE (1)
+  [TEXT] Step 1 — Challenge Generation
+Shape 6: name=Text 5, type=AUTO_SHAPE (1)
+  [TEXT] Unique passphrase per session; time‑bounded validity.
+Shape 7: name=Text 6, type=AUTO_SHAPE (1)
+  [TEXT] 02
+Shape 8: name=Shape 7, type=AUTO_SHAPE (1)
+Shape 9: name=Text 8, type=AUTO_SHAPE (1)
+  [TEXT] Step 2 — ASR Decoding
+Shape 10: name=Text 9, type=AUTO_SHAPE (1)
+  [TEXT] Fine‑tuned Whisper sequence‑to‑sequence model decodes under noise and reverberation.
+Shape 11: name=Text 10, type=AUTO_SHAPE (1)
+  [TEXT] 03
+Shape 12: name=Shape 11, type=AUTO_SHAPE (1)
+Shape 13: name=Text 12, type=AUTO_SHAPE (1)
+  [TEXT] Step 3 — Alignment & Decision
+Shape 14: name=Text 13, type=AUTO_SHAPE (1)
+  [TEXT] Compute Levenshtein distance / WER to the ground truth; enforce strict real‑time execution to prevent replay/offline deepfake substitution.
+
+--- Slide 7 ---
+Shape 0: name=Image 0, type=PICTURE (13)
+  [PICTURE] format=jpg, size=391505 bytes
+Shape 1: name=Text 0, type=AUTO_SHAPE (1)
+  [TEXT] Fusion Interaction & Bayesian Risk Decision Engine
+Shape 2: name=Text 1, type=AUTO_SHAPE (1)
+  [TEXT] Scores fused and calibrated; decision made by minimising posterior expected cost.
+Shape 3: name=Shape 2, type=AUTO_SHAPE (1)
+Shape 4: name=Text 3, type=AUTO_SHAPE (1)
+  [TEXT] Bayesian Formulation
+Shape 5: name=Text 4, type=AUTO_SHAPE (1)
+  [TEXT] Posterior risk for action α given observation x:
+Shape 6: name=Image 1, type=PICTURE (13)
+  [PICTURE] format=png, size=28671 bytes
+Shape 7: name=Text 5, type=AUTO_SHAPE (1)
+  [TEXT] Costs C(·) asymmetric — high penalty for false accept of spoof (operationally weighted).
+Shape 8: name=Shape 6, type=AUTO_SHAPE (1)
+Shape 9: name=Text 7, type=AUTO_SHAPE (1)
+  [TEXT] Decision State Space
+Shape 10: name=Text 8, type=AUTO_SHAPE (1)
+  [TEXT] Low Risk → Target ∧ Genuine ∧ Passphrase Valid → ACCESS GRANTED
+  [TEXT] Impostor Risk → Non‑Target ∧ Genuine → ACCESS DENIED (Impostor)
+  [TEXT] Spoof Risk → Target ∧ Synthesised → ACCESS DENIED (Spoof)
+  [TEXT] Quality Risk → Low SNR / High Uncertainty → ACCESS DENIED (Suspicious)
+
+--- Slide 8 ---
+Shape 0: name=Text 0, type=AUTO_SHAPE (1)
+  [TEXT] Experimental Setup & Technology Stack
+Shape 1: name=Text 1, type=AUTO_SHAPE (1)
+  [TEXT] Benchmark datasets and preprocessing used to evaluate joint pipeline.
+Shape 2: name=Text 2, type=AUTO_SHAPE (1)
+  [TEXT] Identity: VoxCeleb1 & VoxCeleb2 — in‑the‑wild, multilingual variance.
+  [TEXT] Anti‑Spoofing: ASVspoof 2019 LA; ASVspoof 2021 DF and challenge splits.
+  [TEXT] Augmentation: additive noise, reverberation, codec emulation (Opus/AAC/MP3), SpecAugment.
+Shape 3: name=Text 3, type=AUTO_SHAPE (1)
+  [TEXT] Implementation toolchain and components.
+Shape 4: name=Image 0, type=PICTURE (13)
+  [PICTURE] format=png, size=1766 bytes
+Shape 5: name=Text 4, type=AUTO_SHAPE (1)
+  [TEXT] Modeling
+Shape 6: name=Text 5, type=AUTO_SHAPE (1)
+  [TEXT] PyTorch; SpeechBrain for ECAPA‑TDNN.
+Shape 7: name=Image 1, type=PICTURE (13)
+  [PICTURE] format=png, size=2757 bytes
+Shape 8: name=Text 6, type=AUTO_SHAPE (1)
+  [TEXT] Anti‑Spoofing
+Shape 9: name=Text 7, type=AUTO_SHAPE (1)
+  [TEXT] TorchAudio + custom Graph Attention modules for AASIST.
+Shape 10: name=Image 2, type=PICTURE (13)
+  [PICTURE] format=png, size=4809 bytes
+Shape 11: name=Text 8, type=AUTO_SHAPE (1)
+  [TEXT] ASR & Liveness
+Shape 12: name=Text 9, type=AUTO_SHAPE (1)
+  [TEXT] HuggingFace Transformers — Whisper fine‑tuned for noisy, compressed channels.
+
+--- Slide 9 ---
+Shape 0: name=Text 0, type=AUTO_SHAPE (1)
+  [TEXT] System Architecture:
+Shape 1: name=Image 0, type=PICTURE (13)
+  [PICTURE] format=jpg, size=280369 bytes
+Shape 2: name=Text 1, type=AUTO_SHAPE (1)
+  [TEXT] This flowchart illustrates the integrated system architecture, where inputs are processed by both the ECAPA-TDNN for speaker verification and AASIST for anti-spoofing. These parallel assessments feed into a central risk-based decision logic, which then determines whether to grant or deny access, enhancing security against sophisticated spoofing attempts.
+
+--- Slide 10 ---
+Shape 0: name=Text 0, type=AUTO_SHAPE (1)
+  [TEXT] Empirical Benchmarks & System Output
+Shape 1: name=Text 1, type=AUTO_SHAPE (1)
+Shape 2: name=Shape 2, type=AUTO_SHAPE (1)
+Shape 3: name=Text 3, type=AUTO_SHAPE (1)
+  [TEXT] [INPUT] Stream: user_stream_ch1.wav | SR:16000Hz | SNR:24.1dB
+  [TEXT] [ASV-ENGINE] ECAPA-TDNN Embedding Extracted | Cosine Sim: 0.884 (Thr:0.650) -> MATCH
+  [TEXT] [CM-ENGINE] AASIST Graph Score: 0.962 (Genuine Confidence: 98.1%) -> GENUINE
+  [TEXT] [LIVENESS] Whisper Decoded: "DELTA-9-ECHO" | Target: "DELTA-9-ECHO" | Match: 100%
+  [TEXT] [RISK-CORE] Posterior Risk: 0.038 (Thr:0.150) -> RISK LOW
+  [TEXT] [DECISION] >>> ACCESS GRANTED: Verified Enrolled Speaker & Genuine Speech <<<
+Shape 4: name=Shape 4, type=AUTO_SHAPE (1)
+Shape 5: name=Text 5, type=AUTO_SHAPE (1)
+  [TEXT] Detection Rates (Proof‑of‑Concept)
+Shape 6: name=Text 6, type=AUTO_SHAPE (1)
+  [TEXT] Replay Attacks — 95% detection
+  [TEXT] Neural TTS Synthesis — 92% detection
+  [TEXT] Voice Conversion (VC) — 88% detection
+  [TEXT] Unseen Deepfake Vocoders — 85% detection
+Shape 7: name=Shape 7, type=AUTO_SHAPE (1)
+Shape 8: name=Text 8, type=AUTO_SHAPE (1)
+  [TEXT] Notes
+Shape 9: name=Text 9, type=AUTO_SHAPE (1)
+  [TEXT] Rates reflect end‑to‑end pipeline (ASV + CM + Liveness) with calibrated fusion and asymmetric cost weighting for spoof penalties.
+
+--- Slide 11 ---
+Shape 0: name=Text 0, type=AUTO_SHAPE (1)
+  [TEXT] Thank You !!

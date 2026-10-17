@@ -1,0 +1,10 @@
+{
+  "source": "data\\voices\\enrolled\\pawan\\pawan_enroll_20261011_202435_0.wav",
+  "matched_enrollment_files": [
+    "data\\voices\\enrolled\\pawan\\pawan_enroll_20261011_202435_0.wav",
+    "data\\voices\\enrolled\\pawan\\pawan_enroll_20261011_202435_1.wav",
+    "data\\voices\\enrolled\\pawan\\pawan_enroll_20261011_202435_2.wav"
+  ],
+  "template_max_abs_error": 1.9438564777374268e-05,
+  "cm_and_rms_match": true
+}

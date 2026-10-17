@@ -1,0 +1,215 @@
+
+==================== Slide 1 ====================
+Background fill type: BACKGROUND (5)
+Shape 0: Image 0 (type=PICTURE (13))
+Shape 1: Text 0 (type=AUTO_SHAPE (1))
+  P0 R0: 'Secure Biometric Voice Authentication Us' | font=Geist Bold | size=469900 | bold=True
+Shape 2: Text 1 (type=AUTO_SHAPE (1))
+  P0 R0: 'Review 2' | font=Geist Bold | size=234950 | bold=True
+Shape 3: Text 2 (type=AUTO_SHAPE (1))
+  P0 R0: ' Pallli Pavan Kumar — 23MID0181 ' | font=Geist | size=184150 | bold=None
+  P1 R0: ' Venkata Sateesh M — 23MID0179 ' | font=Geist | size=184150 | bold=None
+  P2 R0: ' Mohammed Irfanulla N — 23MID0090 ' | font=Geist | size=184150 | bold=None
+  P3 R0: ' Saswat Subhang — 23MID0075' | font=Geist | size=184150 | bold=None
+
+==================== Slide 2 ====================
+Background fill type: BACKGROUND (5)
+Shape 0: Image 0 (type=PICTURE (13))
+Shape 1: Text 0 (type=AUTO_SHAPE (1))
+  P0 R0: 'Threat Landscape & Limitations of Conven' | font=Geist Bold | size=374650 | bold=True
+Shape 2: Shape 1 (type=AUTO_SHAPE (1))
+Shape 3: Text 2 (type=AUTO_SHAPE (1))
+  P0 R0: 'Threat Taxonomy' | font=Geist Bold | size=234950 | bold=True
+Shape 4: Text 3 (type=AUTO_SHAPE (1))
+  P0 R0: '         • Acoustic replay attacks (loud' | font=Geist | size=184150 | bold=None
+  P1 R0: '         • Parametric and neural TTS syn' | font=Geist | size=184150 | bold=None
+  P2 R0: '         • Voice conversion (latent iden' | font=Geist | size=184150 | bold=None
+  P3 R0: '         • Zero‑day / unseen neural voco' | font=Geist | size=184150 | bold=None
+Shape 5: Shape 4 (type=AUTO_SHAPE (1))
+Shape 6: Text 5 (type=AUTO_SHAPE (1))
+  P0 R0: 'Architectural Gaps' | font=Geist Bold | size=234950 | bold=True
+Shape 7: Text 6 (type=AUTO_SHAPE (1))
+  P0 R0: '         • Disjoint pipelines: ASV and c' | font=Geist | size=184150 | bold=None
+  P1 R0: '         • Static decision boundaries: g' | font=Geist | size=184150 | bold=None
+  P2 R0: ' • Limited generalisability to unseen vo' | font=Geist | size=184150 | bold=None
+
+==================== Slide 3 ====================
+Background fill type: BACKGROUND (5)
+Shape 0: Text 0 (type=AUTO_SHAPE (1))
+  P0 R0: 'End-to-End System Architecture & Workflo' | font=Geist Bold | size=342900 | bold=True
+Shape 1: Image 0 (type=PICTURE (13))
+Shape 2: Text 1 (type=AUTO_SHAPE (1))
+  P0 R0: 'Decision Boundary' | font=Geist Bold | size=228600 | bold=True
+Shape 3: Text 2 (type=AUTO_SHAPE (1))
+  P0 R0: 'Fusion & Bayesian Core' | font=Geist Bold | size=228600 | bold=True
+Shape 4: Text 3 (type=AUTO_SHAPE (1))
+  P0 R0: 'Dual‑Stream Features' | font=Geist Bold | size=228600 | bold=True
+Shape 5: Text 4 (type=AUTO_SHAPE (1))
+  P0 R0: 'Input & Channel' | font=Geist Bold | size=228600 | bold=True
+Shape 6: Text 5 (type=AUTO_SHAPE (1))
+  P0 R0: ' The diagram defines layered processing:' | font=Geist | size=171450 | bold=None
+
+==================== Slide 4 ====================
+Background fill type: BACKGROUND (5)
+Shape 0: Image 0 (type=PICTURE (13))
+Shape 1: Text 0 (type=AUTO_SHAPE (1))
+  P0 R0: 'Identity Verification — ECAPA‑TDNN' | font=Geist Bold | size=374650 | bold=True
+Shape 2: Text 1 (type=AUTO_SHAPE (1))
+  P0 R0: '     Model components: Res2Net blocks, S' | font=Geist | size=184150 | bold=None
+Shape 3: Shape 2 (type=AUTO_SHAPE (1))
+Shape 4: Text 3 (type=AUTO_SHAPE (1))
+  P0 R0: 'Key Mechanisms' | font=Geist Bold | size=234950 | bold=True
+Shape 5: Text 4 (type=AUTO_SHAPE (1))
+  P0 R0: 'SE attention rescales channels to suppre' | font=Geist | size=184150 | bold=None
+  P1 R0: 'Temporal aggregation concatenates hierar' | font=Geist | size=184150 | bold=None
+Shape 6: Shape 5 (type=AUTO_SHAPE (1))
+Shape 7: Text 6 (type=AUTO_SHAPE (1))
+  P0 R0: 'Scoring' | font=Geist Bold | size=234950 | bold=True
+Shape 8: Text 7 (type=AUTO_SHAPE (1))
+  P0 R0: '         Length‑normalised cosine simila' | font=Geist | size=184150 | bold=None
+Shape 9: Image 1 (type=PICTURE (13))
+
+==================== Slide 5 ====================
+Background fill type: BACKGROUND (5)
+Shape 0: Image 0 (type=PICTURE (13))
+Shape 1: Text 0 (type=AUTO_SHAPE (1))
+  P0 R0: 'Anti‑Spoofing Countermeasure — AASIST' | font=Geist Bold | size=374650 | bold=True
+Shape 2: Text 1 (type=AUTO_SHAPE (1))
+  P0 R0: '     AASIST formulates spectro‑temporal ' | font=Geist | size=184150 | bold=None
+Shape 3: Image 1 (type=PICTURE (13))
+Shape 4: Text 2 (type=AUTO_SHAPE (1))
+  P0 R0: 'Graph Formulation' | font=Geist Bold | size=234950 | bold=True
+Shape 5: Text 3 (type=AUTO_SHAPE (1))
+  P0 R0: '         Nodes: time‑frequency patches; ' | font=Geist | size=184150 | bold=None
+Shape 6: Image 2 (type=PICTURE (13))
+Shape 7: Text 4 (type=AUTO_SHAPE (1))
+  P0 R0: 'Output' | font=Geist Bold | size=234950 | bold=True
+Shape 8: Text 5 (type=AUTO_SHAPE (1))
+  P0 R0: '         CM produces a logit / calibrate' | font=Geist | size=184150 | bold=None
+Shape 9: Image 3 (type=PICTURE (13))
+Shape 10: Text 6 (type=AUTO_SHAPE (1))
+  P0 R0: 'denoting naturalness; thresholding combi' | font=Geist | size=184150 | bold=None
+
+==================== Slide 6 ====================
+Background fill type: BACKGROUND (5)
+Shape 0: Image 0 (type=PICTURE (13))
+Shape 1: Text 0 (type=AUTO_SHAPE (1))
+  P0 R0: 'Dynamic Liveness Verification — Whisper ' | font=Geist Bold | size=374650 | bold=True
+Shape 2: Text 1 (type=AUTO_SHAPE (1))
+  P0 R0: '         Real‑time, server‑generated cha' | font=Geist | size=184150 | bold=None
+Shape 3: Text 2 (type=AUTO_SHAPE (1))
+  P0 R0: '01' | font=Geist | size=184150 | bold=None
+Shape 4: Shape 3 (type=AUTO_SHAPE (1))
+Shape 5: Text 4 (type=AUTO_SHAPE (1))
+  P0 R0: 'Step 1 — Challenge Generation' | font=Geist Bold | size=234950 | bold=True
+Shape 6: Text 5 (type=AUTO_SHAPE (1))
+  P0 R0: 'Unique passphrase per session; time‑boun' | font=Geist | size=184150 | bold=None
+Shape 7: Text 6 (type=AUTO_SHAPE (1))
+  P0 R0: '02' | font=Geist | size=184150 | bold=None
+Shape 8: Shape 7 (type=AUTO_SHAPE (1))
+Shape 9: Text 8 (type=AUTO_SHAPE (1))
+  P0 R0: 'Step 2 — ASR Decoding' | font=Geist Bold | size=234950 | bold=True
+Shape 10: Text 9 (type=AUTO_SHAPE (1))
+  P0 R0: 'Fine‑tuned Whisper sequence‑to‑sequence ' | font=Geist | size=184150 | bold=None
+Shape 11: Text 10 (type=AUTO_SHAPE (1))
+  P0 R0: '03' | font=Geist | size=184150 | bold=None
+Shape 12: Shape 11 (type=AUTO_SHAPE (1))
+Shape 13: Text 12 (type=AUTO_SHAPE (1))
+  P0 R0: 'Step 3 — Alignment & Decision' | font=Geist Bold | size=234950 | bold=True
+Shape 14: Text 13 (type=AUTO_SHAPE (1))
+  P0 R0: 'Compute Levenshtein distance / WER to th' | font=Geist | size=184150 | bold=None
+
+==================== Slide 7 ====================
+Background fill type: BACKGROUND (5)
+Shape 0: Image 0 (type=PICTURE (13))
+Shape 1: Text 0 (type=AUTO_SHAPE (1))
+  P0 R0: 'Fusion Interaction & Bayesian Risk Decis' | font=Geist Bold | size=355600 | bold=True
+Shape 2: Text 1 (type=AUTO_SHAPE (1))
+  P0 R0: '     Scores fused and calibrated; decisi' | font=Geist | size=177800 | bold=None
+Shape 3: Shape 2 (type=AUTO_SHAPE (1))
+Shape 4: Text 3 (type=AUTO_SHAPE (1))
+  P0 R0: 'Bayesian Formulation' | font=Geist Bold | size=222250 | bold=True
+Shape 5: Text 4 (type=AUTO_SHAPE (1))
+  P0 R0: '         Posterior risk for action α giv' | font=Geist | size=177800 | bold=None
+Shape 6: Image 1 (type=PICTURE (13))
+Shape 7: Text 5 (type=AUTO_SHAPE (1))
+  P0 R0: '         Costs C(·) asymmetric — high pe' | font=Geist | size=177800 | bold=None
+Shape 8: Shape 6 (type=AUTO_SHAPE (1))
+Shape 9: Text 7 (type=AUTO_SHAPE (1))
+  P0 R0: 'Decision State Space' | font=Geist Bold | size=222250 | bold=True
+Shape 10: Text 8 (type=AUTO_SHAPE (1))
+  P0 R0: 'Low Risk → Target ∧ Genuine ∧ Passphrase' | font=Geist | size=177800 | bold=None
+  P1 R0: 'Impostor Risk → Non‑Target ∧ Genuine → A' | font=Geist | size=177800 | bold=None
+  P2 R0: 'Spoof Risk → Target ∧ Synthesised → ACCE' | font=Geist | size=177800 | bold=None
+  P3 R0: 'Quality Risk → Low SNR / High Uncertaint' | font=Geist | size=177800 | bold=None
+
+==================== Slide 8 ====================
+Background fill type: BACKGROUND (5)
+Shape 0: Text 0 (type=AUTO_SHAPE (1))
+  P0 R0: 'Experimental Setup & Technology Stack' | font=Geist Bold | size=374650 | bold=True
+Shape 1: Text 1 (type=AUTO_SHAPE (1))
+  P0 R0: '         Benchmark datasets and preproce' | font=Geist | size=184150 | bold=None
+Shape 2: Text 2 (type=AUTO_SHAPE (1))
+  P0 R0: 'Identity' | font=Geist Bold | size=184150 | bold=True
+  P0 R1: ': VoxCeleb1 & VoxCeleb2 — in‑the‑wild, m' | font=Geist | size=184150 | bold=None
+  P1 R0: 'Anti‑Spoofing' | font=Geist Bold | size=184150 | bold=True
+  P1 R1: ': ASVspoof 2019 LA; ASVspoof 2021 DF and' | font=Geist | size=184150 | bold=None
+  P2 R0: 'Augmentation: additive noise, reverberat' | font=Geist | size=184150 | bold=None
+Shape 3: Text 3 (type=AUTO_SHAPE (1))
+  P0 R0: '         Implementation toolchain and co' | font=Geist | size=184150 | bold=None
+Shape 4: Image 0 (type=PICTURE (13))
+Shape 5: Text 4 (type=AUTO_SHAPE (1))
+  P0 R0: 'Modeling' | font=Geist Bold | size=234950 | bold=True
+Shape 6: Text 5 (type=AUTO_SHAPE (1))
+  P0 R0: 'PyTorch; SpeechBrain for ECAPA‑TDNN.' | font=Geist | size=184150 | bold=None
+Shape 7: Image 1 (type=PICTURE (13))
+Shape 8: Text 6 (type=AUTO_SHAPE (1))
+  P0 R0: 'Anti‑Spoofing' | font=Geist Bold | size=234950 | bold=True
+Shape 9: Text 7 (type=AUTO_SHAPE (1))
+  P0 R0: 'TorchAudio + custom Graph Attention modu' | font=Geist | size=184150 | bold=None
+Shape 10: Image 2 (type=PICTURE (13))
+Shape 11: Text 8 (type=AUTO_SHAPE (1))
+  P0 R0: 'ASR & Liveness' | font=Geist Bold | size=234950 | bold=True
+Shape 12: Text 9 (type=AUTO_SHAPE (1))
+  P0 R0: 'HuggingFace Transformers — Whisper fine‑' | font=Geist | size=184150 | bold=None
+
+==================== Slide 9 ====================
+Background fill type: BACKGROUND (5)
+Shape 0: Text 0 (type=AUTO_SHAPE (1))
+  P0 R0: 'System Architecture:' | font=Geist Bold | size=444500 | bold=True
+Shape 1: Image 0 (type=PICTURE (13))
+Shape 2: Text 1 (type=AUTO_SHAPE (1))
+  P0 R0: 'This flowchart illustrates the integrate' | font=Geist Bold | size=266700 | bold=True
+
+==================== Slide 10 ====================
+Background fill type: BACKGROUND (5)
+Shape 0: Text 0 (type=AUTO_SHAPE (1))
+  P0 R0: 'Empirical Benchmarks & System Output' | font=Geist Bold | size=355600 | bold=True
+Shape 1: Text 1 (type=AUTO_SHAPE (1))
+  P0 R0: '         ' | font=Geist | size=177800 | bold=None
+Shape 2: Shape 2 (type=AUTO_SHAPE (1))
+Shape 3: Text 3 (type=AUTO_SHAPE (1))
+  P0 R0: '[INPUT] Stream: user_stream_ch1.wav | SR' | font=Consolas | size=177800 | bold=None
+  P1 R0: '[ASV-ENGINE] ECAPA-TDNN Embedding Extrac' | font=Consolas | size=177800 | bold=None
+  P2 R0: '[CM-ENGINE] AASIST Graph Score: 0.962 (G' | font=Consolas | size=177800 | bold=None
+  P3 R0: '[LIVENESS] Whisper Decoded: "DELTA-9-ECH' | font=Consolas | size=177800 | bold=None
+  P4 R0: '[RISK-CORE] Posterior Risk: 0.038 (Thr:0' | font=Consolas | size=177800 | bold=None
+  P5 R0: '[DECISION] >>> ACCESS GRANTED: Verified ' | font=Consolas | size=177800 | bold=None
+Shape 4: Shape 4 (type=AUTO_SHAPE (1))
+Shape 5: Text 5 (type=AUTO_SHAPE (1))
+  P0 R0: 'Detection Rates (Proof‑of‑Concept)' | font=Geist Bold | size=222250 | bold=True
+Shape 6: Text 6 (type=AUTO_SHAPE (1))
+  P0 R0: 'Replay Attacks — 95% detection' | font=Geist | size=177800 | bold=None
+  P1 R0: 'Neural TTS Synthesis — 92% detection' | font=Geist | size=177800 | bold=None
+  P2 R0: 'Voice Conversion (VC) — 88% detection' | font=Geist | size=177800 | bold=None
+  P3 R0: 'Unseen Deepfake Vocoders — 85% detection' | font=Geist | size=177800 | bold=None
+Shape 7: Shape 7 (type=AUTO_SHAPE (1))
+Shape 8: Text 8 (type=AUTO_SHAPE (1))
+  P0 R0: 'Notes' | font=Geist Bold | size=222250 | bold=True
+Shape 9: Text 9 (type=AUTO_SHAPE (1))
+  P0 R0: ' Rates reflect end‑to‑end pipeline (ASV ' | font=Geist | size=177800 | bold=None
+
+==================== Slide 11 ====================
+Background fill type: BACKGROUND (5)
+Shape 0: Text 0 (type=AUTO_SHAPE (1))
+  P0 R0: 'Thank You !!' | font=Geist Bold | size=1416050 | bold=True

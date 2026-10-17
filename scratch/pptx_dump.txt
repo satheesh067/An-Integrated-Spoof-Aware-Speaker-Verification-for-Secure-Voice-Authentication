@@ -1,0 +1,239 @@
+Slide width: 12191695, Slide height: 6858000
+Total slides: 11
+
+
+==================== Slide 1 ====================
+
+[Text 0] (left=5233360, top=1390758, width=6296860, height=2457053):
+  P0 (level=0): Secure Biometric Voice Authentication Using NLP-Based Speaker Verification and Anti-Spoofing
+
+[Text 1] (left=5233311, top=3914482, width=6296860, height=307082):
+  P0 (level=0): Review 2
+
+[Text 2] (left=5233360, top=4504515, width=6296860, height=982663):
+  P0 (level=0):  Pallli Pavan Kumar — 23MID0181 
+  P1 (level=0):  Venkata Sateesh M — 23MID0179 
+  P2 (level=0):  Mohammed Irfanulla N — 23MID0090 
+  P3 (level=0):  Saswat Subhang — 23MID0075
+
+==================== Slide 2 ====================
+
+[Text 0] (left=661475, top=545472, width=6296860, height=982861):
+  P0 (level=0): Threat Landscape & Limitations of Conventional ASV
+
+[Text 2] (left=869531, top=2009378, width=2637764, height=307082):
+  P0 (level=0): Threat Taxonomy
+
+[Text 3] (left=869531, top=2429867, width=2637764, height=3439319):
+  P0 (level=0):          • Acoustic replay attacks (loudspeaker playback with channel degradations).
+  P1 (level=0):          • Parametric and neural TTS synthesis that preserves linguistic content but alters prosody.
+  P2 (level=0):          • Voice conversion (latent identity manipulation) targeting speaker embeddings.
+  P3 (level=0):          • Zero‑day / unseen neural vocoder attacks with new artifact modalities.       
+
+[Text 5] (left=4112415, top=2009378, width=2637863, height=307082):
+  P0 (level=0): Architectural Gaps
+
+[Text 6] (left=4112415, top=2429867, width=2637863, height=3684984):
+  P0 (level=0):          • Disjoint pipelines: ASV and countermeasure (CM) modules trained and thresholded independently, preventing joint optimisation.
+  P1 (level=0):          • Static decision boundaries: global scalar thresholds break under non‑stationary noise, codec mismatch (Opus/AAC/MP3), and microphone variability.
+  P2 (level=0):  • Limited generalisability to unseen vocoders and combined multi‑vector attacks.
+
+==================== Slide 3 ====================
+
+[Text 0] (left=661475, top=538396, width=10868745, height=452338):
+  P0 (level=0): End-to-End System Architecture & Workflow
+
+[Text 1] (left=1664749, top=4872858, width=2323161, height=302018):
+  P0 (level=0): Decision Boundary
+
+[Text 2] (left=1664749, top=3850642, width=2540957, height=302018):
+  P0 (level=0): Fusion & Bayesian Core
+
+[Text 3] (left=1664749, top=2838751, width=2396727, height=302018):
+  P0 (level=0): Dual‑Stream Features
+
+[Text 4] (left=1664749, top=1816535, width=2323161, height=302019):
+  P0 (level=0): Input & Channel
+
+[Text 5] (left=661475, top=5905389, width=10868745, height=434181):
+  P0 (level=0):  The diagram defines layered processing: (1) capture & channel augmentation, (2) parallel feature streams for identity/authenticity/liveness, (3) joint tensor interaction and Bayesian score calibration, (4) posterior‑risk decision policy.
+
+==================== Slide 4 ====================
+
+[Text 0] (left=5233360, top=985507, width=6296860, height=982861):
+  P0 (level=0): Identity Verification — ECAPA‑TDNN
+
+[Text 1] (left=5233360, top=2246594, width=6296860, height=736997):
+  P0 (level=0):      Model components: Res2Net blocks, Squeeze‑and‑Excitation channel attention, multi‑layer aggregation and dense temporal propagation. Produces 192‑D x‑vectors robust to channel noise.   
+
+[Text 3] (left=5447767, top=3405386, width=2625064, height=307082):
+  P0 (level=0): Key Mechanisms
+
+[Text 4] (left=5447767, top=3825875, width=2625064, height=1785739):
+  P0 (level=0): SE attention rescales channels to suppress non‑speaker variance.
+  P1 (level=0): Temporal aggregation concatenates hierarchical representations for stability.
+
+[Text 6] (left=8690651, top=3405386, width=2625163, height=307082):
+  P0 (level=0): Scoring
+
+[Text 7] (left=8690651, top=3825875, width=2625163, height=736997):
+  P0 (level=0):          Length‑normalised cosine similarity between enrol and probe embeddings:       
+
+==================== Slide 5 ====================
+
+[Text 0] (left=5233360, top=990667, width=6296860, height=982861):
+  P0 (level=0): Anti‑Spoofing Countermeasure — AASIST
+
+[Text 1] (left=5233360, top=2251753, width=6296860, height=736997):
+  P0 (level=0):      AASIST formulates spectro‑temporal input as a heterogeneous graph; attention weights capture temporal discontinuities and vocoder artifacts (phase anomalies, high‑frequency roll‑offs).   
+
+[Text 2] (left=5942062, top=3196134, width=2321561, height=307082):
+  P0 (level=0): Graph Formulation
+
+[Text 3] (left=5942062, top=3616623, width=2321561, height=1719659):
+  P0 (level=0):          Nodes: time‑frequency patches; edges: spectral adjacency & temporal transitions; attention learns cross‑modal artifact signatures.       
+
+[Text 4] (left=9208559, top=3196134, width=2321661, height=307082):
+  P0 (level=0): Output
+
+[Text 5] (left=9208559, top=3616623, width=2321661, height=491331):
+  P0 (level=0):          CM produces a logit / calibrated probability 
+
+[Text 6] (left=9208559, top=4895056, width=2321661, height=982663):
+  P0 (level=0): denoting naturalness; thresholding combined with fusion reduces false accepts to spoofed inputs.
+
+==================== Slide 6 ====================
+
+[Text 0] (left=5199726, top=1390419, width=6336745, height=982861):
+  P0 (level=0): Dynamic Liveness Verification — Whisper ASR
+
+[Text 1] (left=5199726, top=2557049, width=6336745, height=736997):
+  P0 (level=0):          Real‑time, server‑generated challenge‑response using random alphanumeric or phonetic passphrases per transaction. Requires live articulation and low latency decoding.       
+
+[Text 2] (left=661475, top=3903563, width=378014, height=245666):
+  P0 (level=0): 01
+
+[Text 4] (left=661475, top=4354116, width=3496877, height=307082):
+  P0 (level=0): Step 1 — Challenge Generation
+
+[Text 5] (left=661475, top=4774605, width=3496877, height=491331):
+  P0 (level=0): Unique passphrase per session; time‑bounded validity.
+
+[Text 6] (left=4347359, top=3903563, width=378014, height=245666):
+  P0 (level=0): 02
+
+[Text 8] (left=4347359, top=4354116, width=3496877, height=307082):
+  P0 (level=0): Step 2 — ASR Decoding
+
+[Text 9] (left=4347359, top=4774605, width=3496877, height=736997):
+  P0 (level=0): Fine‑tuned Whisper sequence‑to‑sequence model decodes under noise and reverberation.
+
+[Text 10] (left=8033244, top=3903563, width=378014, height=245666):
+  P0 (level=0): 03
+
+[Text 12] (left=8033244, top=4354116, width=3496877, height=307082):
+  P0 (level=0): Step 3 — Alignment & Decision
+
+[Text 13] (left=8033244, top=4774605, width=3496877, height=982663):
+  P0 (level=0): Compute Levenshtein distance / WER to the ground truth; enforce strict real‑time execution to prevent replay/offline deepfake substitution.
+
+==================== Slide 7 ====================
+
+[Text 0] (left=5233360, top=670182, width=6296860, height=933847):
+  P0 (level=0): Fusion Interaction & Bayesian Risk Decision Engine
+
+[Text 1] (left=5233360, top=1856234, width=6296860, height=455216):
+  P0 (level=0):      Scores fused and calibrated; decision made by minimising posterior expected cost.   
+
+[Text 3] (left=5431892, top=2695277, width=2666040, height=291703):
+  P0 (level=0): Bayesian Formulation
+
+[Text 4] (left=5431892, top=3089275, width=2666040, height=455216):
+  P0 (level=0):          Posterior risk for action α given observation x:       
+
+[Text 5] (left=5431892, top=4884440, width=2666040, height=682823):
+  P0 (level=0):          Costs C(·) asymmetric — high penalty for false accept of spoof (operationally weighted).       
+
+[Text 7] (left=8665549, top=2695277, width=2666140, height=291703):
+  P0 (level=0): Decision State Space
+
+[Text 8] (left=8665549, top=3089275, width=2666140, height=2910185):
+  P0 (level=0): Low Risk → Target ∧ Genuine ∧ Passphrase Valid → ACCESS GRANTED
+  P1 (level=0): Impostor Risk → Non‑Target ∧ Genuine → ACCESS DENIED (Impostor)
+  P2 (level=0): Spoof Risk → Target ∧ Synthesised → ACCESS DENIED (Spoof)
+  P3 (level=0): Quality Risk → Low SNR / High Uncertainty → ACCESS DENIED (Suspicious)
+
+==================== Slide 8 ====================
+
+[Text 0] (left=661475, top=895218, width=10868745, height=491430):
+  P0 (level=0): Experimental Setup & Technology Stack
+
+[Text 1] (left=661475, top=1834935, width=5770220, height=491331):
+  P0 (level=0):          Benchmark datasets and preprocessing used to evaluate joint pipeline.       
+
+[Text 2] (left=661475, top=2491085, width=5770220, height=1606153):
+  P0 (level=0): Identity: VoxCeleb1 & VoxCeleb2 — in‑the‑wild, multilingual variance.
+  P1 (level=0): Anti‑Spoofing: ASVspoof 2019 LA; ASVspoof 2021 DF and challenge splits.
+  P2 (level=0): Augmentation: additive noise, reverberation, codec emulation (Opus/AAC/MP3), SpecAugment.
+
+[Text 3] (left=6899202, top=1834935, width=5246854, height=245666):
+  P0 (level=0):          Implementation toolchain and components.       
+
+[Text 4] (left=7607903, top=2287984, width=3928567, height=307082):
+  P0 (level=0): Modeling
+
+[Text 5] (left=7607903, top=2784078, width=3928567, height=245666):
+  P0 (level=0): PyTorch; SpeechBrain for ECAPA‑TDNN.
+
+[Text 6] (left=7607903, top=3407767, width=3928567, height=307082):
+  P0 (level=0): Anti‑Spoofing
+
+[Text 7] (left=7607903, top=3903861, width=3928567, height=491331):
+  P0 (level=0): TorchAudio + custom Graph Attention modules for AASIST.
+
+[Text 8] (left=7607903, top=4773216, width=3928567, height=307082):
+  P0 (level=0): ASR & Liveness
+
+[Text 9] (left=7607903, top=5269309, width=3928567, height=491331):
+  P0 (level=0): HuggingFace Transformers — Whisper fine‑tuned for noisy, compressed channels.
+
+==================== Slide 9 ====================
+
+[Text 0] (left=661475, top=626119, width=10868745, height=583605):
+  P0 (level=0): System Architecture:
+
+[Text 1] (left=6773495, top=1631027, width=4762976, height=3851573):
+  P0 (level=0): This flowchart illustrates the integrated system architecture, where inputs are processed by both the ECAPA-TDNN for speaker verification and AASIST for anti-spoofing. These parallel assessments feed into a central risk-based decision logic, which then determines whether to grant or deny access, enhancing security against sophisticated spoofing attempts.
+
+==================== Slide 10 ====================
+
+[Text 0] (left=661475, top=538122, width=10868745, height=466923):
+  P0 (level=0): Empirical Benchmarks & System Output
+
+[Text 3] (left=876873, top=1934865, width=10437948, height=1724025):
+  P0 (level=0): [INPUT] Stream: user_stream_ch1.wav | SR:16000Hz | SNR:24.1dB
+  P1 (level=0): [ASV-ENGINE] ECAPA-TDNN Embedding Extracted | Cosine Sim: 0.884 (Thr:0.650) -> MATCH
+  P2 (level=0): [CM-ENGINE] AASIST Graph Score: 0.962 (Genuine Confidence: 98.1%) -> GENUINE
+  P3 (level=0): [LIVENESS] Whisper Decoded: "DELTA-9-ECHO" | Target: "DELTA-9-ECHO" | Match: 100%
+  P4 (level=0): [RISK-CORE] Posterior Risk: 0.038 (Thr:0.150) -> RISK LOW
+  P5 (level=0): [DECISION] >>> ACCESS GRANTED: Verified Enrolled Speaker & Genuine Speech <<<
+
+[Text 5] (left=860007, top=4648299, width=4951983, height=291703):
+  P0 (level=0): Detection Rates (Proof‑of‑Concept)
+
+[Text 6] (left=860007, top=5042297, width=4951983, height=1089323):
+  P0 (level=0): Replay Attacks — 95% detection
+  P1 (level=0): Neural TTS Synthesis — 92% detection
+  P2 (level=0): Voice Conversion (VC) — 88% detection
+  P3 (level=0): Unseen Deepfake Vocoders — 85% detection
+
+[Text 8] (left=6379606, top=4648299, width=4952082, height=291703):
+  P0 (level=0): Notes
+
+[Text 9] (left=6379606, top=5042297, width=4952082, height=682823):
+  P0 (level=0):  Rates reflect end‑to‑end pipeline (ASV + CM + Liveness) with calibrated fusion and asymmetric cost weighting for spoof penalties.
+
+==================== Slide 11 ====================
+
+[Text 0] (left=661475, top=2548461, width=10868745, height=1842889):
+  P0 (level=0): Thank You !!

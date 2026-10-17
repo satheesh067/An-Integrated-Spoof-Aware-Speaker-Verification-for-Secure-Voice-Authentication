@@ -1,0 +1,117 @@
+{
+  "status": "EXPERIMENTAL_PILOT_ONLY",
+  "calibration_scope": "Multi-speaker pilot dataset clips scored through live model wrappers (SpeechBrain ECAPA + raw-waveform AASIST)",
+  "calibration_disclaimer": "This calibration is an exploratory pilot sample on prerecorded dataset clips. It does NOT establish validated live microphone population security or operational FAR/FRR. Thresholds are derived strictly using the reproducible DEV-only calibration procedure. The EVAL partition is a pilot validation feedback set, NOT an untouched final test set.",
+  "protocol_partitions": {
+    "dev_partition": "Development set used for logistic regression fusion training and threshold derivation (21 trials)",
+    "eval_partition": "Pilot validation feedback set used for gate inspection and failure analysis (21 trials)",
+    "test_partition": "RESERVED - Future untouched test partition to be collected and evaluated only after models/policies are frozen"
+  },
+  "score_inversion_finding": {
+    "description": "Beta genuine CM score (-6.2595) is lower than both target attack scores (-6.0606, -5.8459).",
+    "mathematical_implication": "No single CM cutoff can accept genuine Beta while rejecting both attacks.",
+    "measured_cost": "Under strict gated policy, 4/4 target attacks and 8/8 human impostors are rejected, but genuine acceptance is 1/3 (33.3%)."
+  },
+  "enrolled_speakers_dev": [
+    "spk_alpha",
+    "spk_beta",
+    "spk_gamma"
+  ],
+  "enrolled_speakers_eval": [
+    "spk_alpha",
+    "spk_beta",
+    "spk_delta"
+  ],
+  "num_trials_dev": 21,
+  "num_trials_eval": 21,
+  "models": {
+    "speaker_verification": "speechbrain/spkrec-ecapa-voxceleb",
+    "countermeasure": "SpeechAntiSpoofingBenchmarks/AASIST"
+  },
+  "trained_fusion_weights": {
+    "w_asv": 12.7265,
+    "w_cm": 0.1767,
+    "bias": -3.478,
+    "method": "LogisticRegression(BCEWithLogitsLoss, balanced) on DEV"
+  },
+  "operating_policies": {
+    "high_convenience": {
+      "description": "Permissive convenience tier targeting 100% TAR on DEV at the expense of attack rejection. Accepts 1/8 DEV impostors and 3/4 EVAL target spoofs. Genuine acceptance on EVAL is an empirical pilot observation, not an operational guarantee.",
+      "speaker_threshold": 0.3024,
+      "spoof_threshold": -6.5,
+      "fusion_threshold": -0.3486,
+      "require_cm_gate": false,
+      "derivation_rule": "DEV-only: Set at DEV human impostor score ceiling (tau_fus = max(S_imp,dev)).",
+      "dev_metrics": {
+        "threshold": -0.3486,
+        "require_cm_gate": false,
+        "tar_pct": 100.0,
+        "impostor_rej_pct": 100.0,
+        "target_spoof_rej_pct": 25.0,
+        "nontarget_spoof_rej_pct": 100.0,
+        "all_spoof_rej_pct": 70.0
+      },
+      "eval_metrics": {
+        "threshold": -0.3486,
+        "require_cm_gate": false,
+        "tar_pct": 100.0,
+        "impostor_rej_pct": 100.0,
+        "target_spoof_rej_pct": 25.0,
+        "nontarget_spoof_rej_pct": 100.0,
+        "all_spoof_rej_pct": 70.0
+      }
+    },
+    "balanced": {
+      "description": "Balanced operational policy calibrated on DEV separating authentic users from impostors.",
+      "speaker_threshold": 0.313,
+      "spoof_threshold": -4.0694,
+      "fusion_threshold": 0.0783,
+      "require_cm_gate": false,
+      "derivation_rule": "DEV-only: Exact arithmetic midpoint boundary (tau_fus = (max(S_imp,dev) + min(S_gen,dev))/2).",
+      "dev_metrics": {
+        "threshold": 0.0783,
+        "require_cm_gate": false,
+        "tar_pct": 100.0,
+        "impostor_rej_pct": 100.0,
+        "target_spoof_rej_pct": 75.0,
+        "nontarget_spoof_rej_pct": 100.0,
+        "all_spoof_rej_pct": 90.0
+      },
+      "eval_metrics": {
+        "threshold": 0.0783,
+        "require_cm_gate": false,
+        "tar_pct": 66.67,
+        "impostor_rej_pct": 100.0,
+        "target_spoof_rej_pct": 25.0,
+        "nontarget_spoof_rej_pct": 100.0,
+        "all_spoof_rej_pct": 70.0
+      }
+    },
+    "strict_security": {
+      "description": "High security operational policy with mandatory anti-spoof safeguard gate. Blocks attacks even when voice similarity is high, with measured trade-off in genuine rejection.",
+      "speaker_threshold": 0.3237,
+      "spoof_threshold": -4.0694,
+      "fusion_threshold": 0.5052,
+      "require_cm_gate": true,
+      "derivation_rule": "DEV-only: Set at genuine DEV score floors (tau_fus = min(S_gen,dev), tau_cm = min(S_gen,dev)) with mandatory CM gate.",
+      "dev_metrics": {
+        "threshold": 0.5052,
+        "require_cm_gate": true,
+        "tar_pct": 100.0,
+        "impostor_rej_pct": 100.0,
+        "target_spoof_rej_pct": 75.0,
+        "nontarget_spoof_rej_pct": 100.0,
+        "all_spoof_rej_pct": 90.0
+      },
+      "eval_metrics": {
+        "threshold": 0.5052,
+        "require_cm_gate": true,
+        "tar_pct": 33.33,
+        "impostor_rej_pct": 100.0,
+        "target_spoof_rej_pct": 100.0,
+        "nontarget_spoof_rej_pct": 100.0,
+        "all_spoof_rej_pct": 100.0
+      }
+    }
+  }
+}

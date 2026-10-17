@@ -1,0 +1,24 @@
+{
+  "username": "jay",
+  "num_recordings": 3,
+  "created_at": "2026-10-12T06:54:07Z",
+  "embedding_dim": 192,
+  "clip_reports": [
+    {
+      "file": "clip_0.wav",
+      "cm_score": 2.2836,
+      "rms": 0.0438
+    },
+    {
+      "file": "clip_1.wav",
+      "cm_score": 0.7282,
+      "rms": 0.0341
+    },
+    {
+      "file": "clip_2.wav",
+      "cm_score": 2.5387,
+      "rms": 0.0317
+    }
+  ],
+  "template_file": "data\\enrolled_users\\jay_template.npy"
+}

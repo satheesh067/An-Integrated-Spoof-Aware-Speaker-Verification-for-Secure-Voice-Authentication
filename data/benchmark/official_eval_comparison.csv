@@ -1,0 +1,7 @@
+System,SASV-EER (%),SV-EER (%),SPF-EER (%),Target Acceptance (%),Impostor Rejection (%),Spoof Rejection (%)
+Standalone ASV (ECAPA-TDNN),23.84,1.64,30.75,98.08,98.84,33.5
+Standalone CM (AASIST),24.5,48.92,0.66,99.81,1.13,98.16
+SASV Baseline 1 (Score-Sum),22.36,43.11,0.65,N/A (unthresholded),N/A (unthresholded),N/A (unthresholded)
+Cascaded Tandem Baseline (Dual Thresh),N/A (dual decision),N/A (dual decision),N/A (dual decision),97.97,98.85,99.42
+"Learned Score Fusion (DEV EER Thresh, tau=0.72)",2.63,3.58,1.49,97.36,93.4,99.51
+"Learned Score Fusion (Strict Security, tau=1.36)",2.63,3.58,1.49,93.76,98.87,99.92

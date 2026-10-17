@@ -1,0 +1,54 @@
+[
+  {
+    "trial_id": "PILOT-01",
+    "enrolled_speaker_id": "speaker_alpha",
+    "enrolled_file": "speaker_alpha_enroll.wav",
+    "test_file": "speaker_alpha_genuine.wav",
+    "claimed_speaker": "speaker_alpha",
+    "target_type": "target",
+    "spoof_label": "bona_fide",
+    "attack_type": "none",
+    "source_provenance": "VoxCeleb reference (split segment B)",
+    "expected_decision": "ACCESS_GRANTED",
+    "expected_verdict": "TARGET_GENUINE"
+  },
+  {
+    "trial_id": "PILOT-02",
+    "enrolled_speaker_id": "speaker_alpha",
+    "enrolled_file": "speaker_alpha_enroll.wav",
+    "test_file": "speaker_beta_impostor.wav",
+    "claimed_speaker": "speaker_alpha",
+    "target_type": "impostor",
+    "spoof_label": "bona_fide",
+    "attack_type": "none",
+    "source_provenance": "VoxCeleb reference (different speaker)",
+    "expected_decision": "ACCESS_DENIED",
+    "expected_verdict": "IMPOSTOR_HUMAN"
+  },
+  {
+    "trial_id": "PILOT-03",
+    "enrolled_speaker_id": "speaker_alpha",
+    "enrolled_file": "speaker_alpha_enroll.wav",
+    "test_file": "speaker_alpha_synthetic_spoof.wav",
+    "claimed_speaker": "speaker_alpha",
+    "target_type": "target",
+    "spoof_label": "spoof",
+    "attack_type": "synthetic_tts_vc",
+    "source_provenance": "Calibrated vocoder/spectral perturbation of Speaker Alpha",
+    "expected_decision": "ACCESS_DENIED",
+    "expected_verdict": "SPOOF_ATTACK"
+  },
+  {
+    "trial_id": "PILOT-04",
+    "enrolled_speaker_id": "speaker_alpha",
+    "enrolled_file": "speaker_alpha_enroll.wav",
+    "test_file": "speaker_alpha_replay_spoof.wav",
+    "claimed_speaker": "speaker_alpha",
+    "target_type": "target",
+    "spoof_label": "spoof",
+    "attack_type": "physical_replay",
+    "source_provenance": "Simulated acoustic room impulse & bandpass loudspeaker replay",
+    "expected_decision": "ACCESS_DENIED",
+    "expected_verdict": "SPOOF_ATTACK"
+  }
+]

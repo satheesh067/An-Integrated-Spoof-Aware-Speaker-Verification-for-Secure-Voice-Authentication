@@ -1,0 +1,212 @@
+Total slides in updated presentation: 11
+
+==================== Slide 1 ====================
+[Image 0 PICTURE]: pos=(0, 0) size=(4800480, 6858000)
+[Text 0] (type=AUTO_SHAPE (1)):
+    - Secure Biometric Voice Authentication Using NLP-Based Speaker Verification and Anti-Spoofing
+    - Review 2 — Comprehensive Project Implementation & Experimental Defense
+[Text 1] (type=AUTO_SHAPE (1)):
+    - Review 2
+[Text 2] (type=AUTO_SHAPE (1)):
+    - Palli Pavan Kumar — 23MID0181
+    - Venkata Sateesh M — 23MID0179
+    - Mohammed Irfanulla N — 23MID0090
+    - Saswat Subhang — 23MID0075
+
+==================== Slide 2 ====================
+[Image 0 PICTURE]: pos=(7391215, 0) size=(4800480, 6858000)
+[Text 0] (type=AUTO_SHAPE (1)):
+    - Threat Landscape & Limitations of Conventional ASV
+[Text 2] (type=AUTO_SHAPE (1)):
+    - Voice Biometric Threat Taxonomy
+[Text 3] (type=AUTO_SHAPE (1)):
+    - • Neural TTS Voice Cloning: Modern generative models (ElevenLabs, VITS) synthesize photorealistic human speech from <5s of audio, perfectly cloning target speaker timbre.
+    - • Voice Conversion (VC): Latent identity transformation mapping attacker prosody onto target speaker embeddings while retaining spoken words.
+    - • Acoustic Replay Attacks: High-fidelity loudspeaker playback capturing and re-transmitting genuine enrollment utterances into microphones.
+    - • Zero-Day Vocoder Artifacts: Subtle synthetic artifacts, latent phase incoherencies, and high-frequency roll-offs in generated audio.
+[Text 5] (type=AUTO_SHAPE (1)):
+    - Limitations of Conventional ASV
+[Text 6] (type=AUTO_SHAPE (1)):
+    - • The Fatal Blindspot: Conventional ASV (pure ECAPA-TDNN) measures only acoustic similarity (s_asv). Modern voice clones achieve s_asv > 0.70, causing a 100% false accept vulnerability to targeted deepfakes.
+    - • Disjoint Architecture: Standalone ASV and Countermeasure (CM) modules operate in isolation without joint score fusion or cross-risk calibration.
+    - • Absence of Dynamic Liveness: Static passphrases fail completely against recorded audio playback, live replay, and responsive voice generation.
+
+==================== Slide 3 ====================
+[Text 0] (type=AUTO_SHAPE (1)):
+    - End-to-End System Architecture & 5-Stage Verification Flow
+[Image 0 PICTURE]: pos=(975693, 1300163) size=(10240210, 4415929)
+[Text 1] (type=AUTO_SHAPE (1)):
+    - Stage 5: Gated Score Fusion
+    - Trained Logistic Regression + Non-linear hard countermeasure floor gate.
+[Text 2] (type=AUTO_SHAPE (1)):
+    - Stage 3 & 4: Dual Neural Verification
+    - AASIST Spectro-Temporal GAT (s_cm) + ECAPA-TDNN 192-d Cosine Match (s_asv).
+[Text 3] (type=AUTO_SHAPE (1)):
+    - Stage 2: Dynamic Liveness
+    - OpenAI Whisper ASR, 20s TTL session nonce, 2-digit number verification.
+[Text 4] (type=AUTO_SHAPE (1)):
+    - Stage 1: Signal Diagnostics
+    - 16 kHz mono standardization, RMS >= 0.003, clipping & duration check.
+[Text 5] (type=AUTO_SHAPE (1)):
+    - Multi-Layer Defense Formulation: Jointly resolves Identity (ECAPA-TDNN), Authenticity (AASIST), and Live Presence (Whisper ASR), enforcing a mandatory countermeasure safeguard gate to block 100% of target attacks in <390 ms.
+
+==================== Slide 4 ====================
+[Image 0 PICTURE]: pos=(0, 0) size=(4800480, 6858000)
+[Text 0] (type=AUTO_SHAPE (1)):
+    - Identity Verification Layer — ECAPA-TDNN
+[Text 1] (type=AUTO_SHAPE (1)):
+    - SpeechBrain ECAPA-TDNN extracts 192-dimensional L2-normalized speaker embeddings robust to channel noise and acoustic variations, scoring via cosine similarity against enrolled templates.
+[Text 3] (type=AUTO_SHAPE (1)):
+    - Architectural Mechanisms
+[Text 4] (type=AUTO_SHAPE (1)):
+    - • Res2Net Dilated Convolutions: Hierarchical multi-scale feature maps capture speaker-discriminative vocal tract acoustics.
+    - • Squeeze-and-Excitation (SE): Channel-attention blocks dynamically rescale feature channels, suppressing non-speaker noise.
+    - • Multi-layer Feature Aggregation (MFA): Concatenates shallow and deep representations for acoustic stability.
+    - • Attentive Statistical Pooling (ASP): Weights temporal frames into a 192-d mean & standard deviation vector.
+[Text 6] (type=AUTO_SHAPE (1)):
+    - Scoring & Multi-Utterance Enrollment
+[Text 7] (type=AUTO_SHAPE (1)):
+    - • Length-Normalized Cosine Similarity:  s_asv = (e_probe · e_enroll) / (||e_probe|| ||e_enroll||)
+    - • Multi-Utterance Enrollment: 3 genuine user recordings quality-checked, normalized, and averaged into an enrolled voice template.
+    - • Live Score Dynamics: Target genuine matches score s_asv in [0.35, 0.75]; zero-effort human impostors score s_asv in [-0.10, 0.25].
+[Image 1 PICTURE]: pos=(8690651, 4802088) size=(2625163, 866378)
+
+==================== Slide 5 ====================
+[Image 0 PICTURE]: pos=(0, 0) size=(4800480, 6858000)
+[Text 0] (type=AUTO_SHAPE (1)):
+    - Anti-Spoofing Countermeasure — AASIST
+[Text 1] (type=AUTO_SHAPE (1)):
+    - AASIST processes 16 kHz raw waveforms directly through SincNet filterbanks and heterogeneous spectro-temporal graph attention, exposing synthetic speech boundaries and vocoder phase anomalies.
+[Image 1 PICTURE]: pos=(5233360, 3196134) size=(472468, 472480)
+[Text 2] (type=AUTO_SHAPE (1)):
+    - Raw Waveform & Graph Architecture
+[Text 3] (type=AUTO_SHAPE (1)):
+    - • Raw Waveform Input: Operates on 64,600 samples (4.04s) of 16 kHz audio without lossy spectrogram transforms, preserving crucial phase information.
+    - • SincNet Bandpass Filterbanks: Learns bandpass filters directly from waveforms to capture frequency-selective artifact modulations.
+    - • Heterogeneous Graph Attention: Nodes represent time-frequency patches; edges model spectral adjacency and temporal transitions to detect synthetic vocoder artifacts.
+[Image 2 PICTURE]: pos=(8499858, 3196134) size=(472468, 472480)
+[Text 4] (type=AUTO_SHAPE (1)):
+    - Countermeasure Scoring & Integrity
+[Text 5] (type=AUTO_SHAPE (1)):
+    - • Dual Logit Score:  s_cm = logit_bonafide - logit_spoof
+[Image 3 PICTURE]: pos=(9208559, 4347170) size=(2321661, 308670)
+[Text 6] (type=AUTO_SHAPE (1)):
+    - • Cryptographic Verification: Pretrained weights verified against Clova AI canonical repository (SHA-256: 51d2d9cf..., 1.28 MB).
+    - • Score Behavior: Bona fide human speech yields positive logits (s_cm > 0), whereas synthetic vocoders drive scores strongly negative (s_cm << 0).
+
+==================== Slide 6 ====================
+[Image 0 PICTURE]: pos=(661475, 1190526) size=(4070744, 2306737)
+[Text 0] (type=AUTO_SHAPE (1)):
+    - Dynamic Liveness Verification — Whisper ASR
+[Text 1] (type=AUTO_SHAPE (1)):
+    - Real-time challenge-response verification using server-issued ephemeral nonces and sequence-to-sequence ASR to defeat pre-recorded replay, live relays, and offline deepfakes.
+[Text 2] (type=AUTO_SHAPE (1)):
+    - 01
+[Text 4] (type=AUTO_SHAPE (1)):
+    - Step 1 — Ephemeral Challenge Nonce
+[Text 5] (type=AUTO_SHAPE (1)):
+    - • Server generates a random phonetic phrase bound to a 2-digit number (e.g., 'WHISKEY-7-ECHO 42').
+    - • Enforces a strict 20-second Time-To-Live (TTL); challenge is consumed immediately upon submission to prevent replay.
+[Text 6] (type=AUTO_SHAPE (1)):
+    - 02
+[Text 8] (type=AUTO_SHAPE (1)):
+    - Step 2 — Real-Time Whisper ASR
+[Text 9] (type=AUTO_SHAPE (1)):
+    - • OpenAI Whisper (small.en) running on local CUDA GPU transcribes probe audio in ~320 ms latency.
+    - • Sequence-to-sequence transformer decodes accurately under acoustic background noise and accented articulation.
+[Text 10] (type=AUTO_SHAPE (1)):
+    - 03
+[Text 12] (type=AUTO_SHAPE (1)):
+    - Step 3 — Dual Alignment & Anti-Replay
+[Text 13] (type=AUTO_SHAPE (1)):
+    - • Word token overlap >= 60% AND mandatory exact extraction of the 2-digit security number.
+    - • Defeats pre-recorded audio playback and static voice clones, as attackers cannot predict the dynamic challenge ahead of time.
+
+==================== Slide 7 ====================
+[Image 0 PICTURE]: pos=(0, 0) size=(4800480, 6858000)
+[Text 0] (type=AUTO_SHAPE (1)):
+    - Learned Score Fusion & Non-Linear Safeguard Gate
+[Text 1] (type=AUTO_SHAPE (1)):
+    - Resolving the Voice Clone Leak through trained PyTorch logistic regression, non-linear tandem gating, and calibrated operating policy tiers.
+[Text 3] (type=AUTO_SHAPE (1)):
+    - Linear Fusion & The Voice Clone Leak
+[Text 4] (type=AUTO_SHAPE (1)):
+    - • PyTorch Logistic Regression Trained on DEV:  s_fus = 12.7265·s_asv + 0.1767·s_cm - 3.4780
+[Image 1 PICTURE]: pos=(5431892, 3760391) size=(2666040, 908149)
+[Text 5] (type=AUTO_SHAPE (1)):
+    - • The Voice Clone Leak Discovery: High speaker similarity (s_asv = +0.7181) mathematically overwhelms negative CM scores (s_cm = -6.0606), pushing fused score to +4.5899 > tau_fus and leaking access! Pure linear fusion leaks 50% of target attacks.
+[Text 7] (type=AUTO_SHAPE (1)):
+    - The Tandem Safeguard Gate & Policy Tiers
+[Text 8] (type=AUTO_SHAPE (1)):
+    - • Mandatory Safeguard Gate: Mandates s_cm >= tau_cm hard floor in tandem with s_fus >= tau_fus, blocking 100% (4/4) of target attacks on evaluation trials!
+    - • Calibrated DEV-Only Operating Policy Tiers:
+    - - Balanced: tau_fus = +0.0783, tau_asv = +0.3130, tau_cm = -4.0694
+    - - Strict Security: tau_fus = +0.5052, tau_asv = +0.3237, tau_cm = -4.0694
+    - - High Convenience: tau_fus = -0.3486, tau_asv = +0.3024, tau_cm = -6.5000
+
+==================== Slide 8 ====================
+[Text 0] (type=AUTO_SHAPE (1)):
+    - System Inputs, Outputs & Decision Taxonomy
+[Text 1] (type=AUTO_SHAPE (1)):
+    - System Input Specifications
+[Text 2] (type=AUTO_SHAPE (1)):
+    - • Audio Stream: 16 kHz 16-bit Mono PCM audio via Web Audio API or WAV upload.
+    - • Claimed Identity: Canonical username string (e.g., 'user_alpha').
+    - • Dynamic Session Nonce: Cryptographic challenge token (<= 20s TTL).
+    - • Operating Policy: Server-enforced 'strict_security' (or balanced/convenience).
+[Text 3] (type=AUTO_SHAPE (1)):
+    - Implementation toolchain and components.
+[Image 0 PICTURE]: pos=(6899202, 2287984) size=(472468, 472480)
+[Text 4] (type=AUTO_SHAPE (1)):
+    - 7 Granular Decision Verdicts
+[Text 5] (type=AUTO_SHAPE (1)):
+    - AUTHENTICATED: Target + genuine + fresh challenge. ACCESS GRANTED.
+[Image 1 PICTURE]: pos=(6899202, 3407767) size=(472468, 472480)
+[Text 6] (type=AUTO_SHAPE (1)):
+    - Security Denials
+[Text 7] (type=AUTO_SHAPE (1)):
+    - SUSPECTED_SPOOF (Voice matched, AASIST detected clone/replay); SPEAKER_MISMATCH (Genuine voice, but wrong user); DUAL_CRITERIA_FAILURE.
+[Image 2 PICTURE]: pos=(6899202, 4773216) size=(472468, 472480)
+[Text 8] (type=AUTO_SHAPE (1)):
+    - Protocol & Diagnostics
+[Text 9] (type=AUTO_SHAPE (1)):
+    - CHALLENGE_FAILED (Expired token or wrong number); POOR_AUDIO_QUALITY (RMS < 0.003); MARGINAL_FUSION_REJECTION (Sub-scores pass, joint fails).
+
+==================== Slide 9 ====================
+[Text 0] (type=AUTO_SHAPE (1)):
+    - System Architecture Flowchart & Operational Pipeline
+[Text 1] (type=AUTO_SHAPE (1)):
+    - End-to-End Multimodal Execution Flow: Client captures 16 kHz audio and initiates a time-bound session. Stage 1 validates signal quality (RMS >= 0.003). Parallel AI streams execute Dynamic Liveness via Whisper ASR (Stage 2), Anti-Spoofing via raw-waveform AASIST (Stage 3), and Deep Speaker Verification via ECAPA-TDNN (Stage 4). Stage 5 applies learned logistic regression score fusion backed by a mandatory countermeasure safeguard gate, outputting 7 granular verdicts and telemetry in <390 ms with guaranteed state restoration.
+[Picture 4 PICTURE]: pos=(640080, 1645920) size=(6858000, 4297680)
+
+==================== Slide 10 ====================
+[Text 0] (type=AUTO_SHAPE (1)):
+    - Empirical Benchmarks, Evaluation Results & Hardware Telemetry
+[Text 3] (type=AUTO_SHAPE (1)):
+    - Empirical Evaluation Comparison on Pilot EVAL Set (21 Trials across 4 Speakers):
+    - • Standalone ASV Gate: TAR: 66.7% (2/3) | Impostor Rej: 100.0% (8/8) | Target Spoof Rej: 50.0% (2/4 - Leaks 2 clones!) | Overall Spoof: 80.0%
+    - • Standalone CM Gate: TAR: 66.7% (2/3) | Impostor Rej: 25.0% (2/8 - Fails on impostors!) | Target Spoof Rej: 75.0% (3/4) | Overall Spoof: 40.0%
+    - • Fused (Pure Linear): TAR: 66.7% (2/3) | Impostor Rej: 100.0% (8/8) | Target Spoof Rej: 25.0% (1/4 - Leaks 3 clones!) | Overall Spoof: 70.0%
+    - • Fused Strict Gated (Our System): Impostor Rejection: 100.0% (8/8) | Target Spoof Rej: 100.0% (4/4 BLOCKED) | Non-Target Spoof Rej: 100.0% (6/6) | Overall Spoof Rej: 100.0% (10/10)
+[Text 5] (type=AUTO_SHAPE (1)):
+    - The Beta Score Inversion Finding
+[Text 6] (type=AUTO_SHAPE (1)):
+    - • Authentic Beta (EVAL-B-GEN): s_cm = -6.2595
+    - • Beta Voice Clone (EVAL-B-TSPOOF-SYN): s_cm = -6.0606 [INVERTED]
+    - • Beta Replay Attack (EVAL-B-TSPOOF-REP): s_cm = -5.8459 [INVERTED]
+    - • Key Finding: Acoustic reverberation/compression caused authentic speech to score more negative than neural clones, proving 1D CM thresholds fail without multi-modal gating.
+[Text 8] (type=AUTO_SHAPE (1)):
+    - Live Hardware & Latency Telemetry
+[Text 9] (type=AUTO_SHAPE (1)):
+    - • GPU Hardware: NVIDIA GeForce RTX 3050 Laptop GPU (CUDA 12.x)
+    - • VRAM Footprint: ~1,011 MB allocated / 4,095 MB budget (lightweight)
+    - • Latency Breakdown: ECAPA = 15.2 ms | AASIST = 24.8 ms | Whisper = 321.4 ms | Total E2E = 382.5 ms (real-time sub-second)
+
+==================== Slide 11 ====================
+[Text 0] (type=AUTO_SHAPE (1)):
+    - System Implementation, Technology Stack & Summary
+    - • Production Technology Stack: FastAPI REST server, PyTorch CUDA 12.x, SpeechBrain ECAPA-TDNN, AASIST raw waveform GAT, OpenAI Whisper small.en, and reactive Glassmorphic Web UI (/ui/).
+    - • Production Security Controls: Server-controlled strict policy enforcement, outer try...finally state restoration eliminating cross-request memory pollution, and permanent audio audit trail.
+    - • Automated Test Coverage: 7 Automated Backend Integration Test Suites passing (100% exit code 0) verifying enrollment, challenges, spoof detection, and threshold policies.
+    - • Core Scientific Contribution: Identified the mathematical Voice Clone Leak in linear SASV fusion and proved that non-linear tandem countermeasure gating achieves 100% target attack blocking in <390 ms.
+    - Thank You! Questions & Discussion.

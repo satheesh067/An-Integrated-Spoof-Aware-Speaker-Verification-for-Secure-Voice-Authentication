@@ -1,0 +1,5 @@
+trial_id,enrolled_speaker_id,enrolled_file,test_file,claimed_speaker,target_type,spoof_label,attack_type,source_provenance,expected_decision,expected_verdict
+PILOT-01,speaker_alpha,speaker_alpha_enroll.wav,speaker_alpha_genuine.wav,speaker_alpha,target,bona_fide,none,VoxCeleb reference (split segment B),ACCESS_GRANTED,TARGET_GENUINE
+PILOT-02,speaker_alpha,speaker_alpha_enroll.wav,speaker_beta_impostor.wav,speaker_alpha,impostor,bona_fide,none,VoxCeleb reference (different speaker),ACCESS_DENIED,IMPOSTOR_HUMAN
+PILOT-03,speaker_alpha,speaker_alpha_enroll.wav,speaker_alpha_synthetic_spoof.wav,speaker_alpha,target,spoof,synthetic_tts_vc,Calibrated vocoder/spectral perturbation of Speaker Alpha,ACCESS_DENIED,SPOOF_ATTACK
+PILOT-04,speaker_alpha,speaker_alpha_enroll.wav,speaker_alpha_replay_spoof.wav,speaker_alpha,target,spoof,physical_replay,Simulated acoustic room impulse & bandpass loudspeaker replay,ACCESS_DENIED,SPOOF_ATTACK

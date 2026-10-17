@@ -1,0 +1,34 @@
+# Virtual Environment
+.venv/
+env/
+venv/
+ENV/
+
+# Python cache & build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# Logs and temporary backups
+*.log
+*.backup
+*.bak
+scratch/*.log
+
+# Large external models & checkpoints
+models/checkpoints/ecapa_local/
+
+# External baseline challenge repository and large embeddings
+data/sasv_baseline/
+
+# Scratch UI references
+scratch/ui-reference/

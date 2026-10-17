@@ -1,0 +1,154 @@
+[
+  {
+    "claimed_speaker": "speaker_alpha",
+    "test_file": "speaker_alpha_genuine.wav",
+    "enrolled_file": "speaker_alpha_enroll.wav",
+    "decision": "ACCESS_GRANTED",
+    "verdict_type": "TARGET_GENUINE",
+    "speaker_score": 0.3963,
+    "speaker_threshold": 0.35,
+    "speaker_matched": true,
+    "spoof_score": -1.8377,
+    "spoof_threshold": -2.0,
+    "spoof_passed": true,
+    "risk_score": 0.0,
+    "reasons": [
+      "Access Granted: Speaker verified (Cosine 0.396 >= 0.350) and anti-spoof passed (CM -1.838 >= -2.000)."
+    ],
+    "telemetry": {
+      "device": "cuda",
+      "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "ecapa_latency_ms": 21.77,
+      "aasist_latency_ms": 391.88,
+      "total_latency_ms": 1705.18,
+      "peak_vram_mb": 278.43
+    },
+    "trial_metadata": {
+      "trial_id": "PILOT-01",
+      "enrolled_speaker_id": "speaker_alpha",
+      "enrolled_file": "speaker_alpha_enroll.wav",
+      "test_file": "speaker_alpha_genuine.wav",
+      "claimed_speaker": "speaker_alpha",
+      "target_type": "target",
+      "spoof_label": "bona_fide",
+      "attack_type": "none",
+      "source_provenance": "VoxCeleb reference (split segment B)",
+      "expected_decision": "ACCESS_GRANTED",
+      "expected_verdict": "TARGET_GENUINE"
+    }
+  },
+  {
+    "claimed_speaker": "speaker_alpha",
+    "test_file": "speaker_beta_impostor.wav",
+    "enrolled_file": "speaker_alpha_enroll.wav",
+    "decision": "ACCESS_DENIED",
+    "verdict_type": "DUAL_FAILURE",
+    "speaker_score": 0.2215,
+    "speaker_threshold": 0.35,
+    "speaker_matched": false,
+    "spoof_score": -6.2595,
+    "spoof_threshold": -2.0,
+    "spoof_passed": false,
+    "risk_score": 0.0,
+    "reasons": [
+      "Dual Failure: Failed speaker threshold (0.221 < 0.350) and failed spoof threshold (-6.260 < -2.000)."
+    ],
+    "telemetry": {
+      "device": "cuda",
+      "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "ecapa_latency_ms": 22.83,
+      "aasist_latency_ms": 31.8,
+      "total_latency_ms": 83.18,
+      "peak_vram_mb": 278.43
+    },
+    "trial_metadata": {
+      "trial_id": "PILOT-02",
+      "enrolled_speaker_id": "speaker_alpha",
+      "enrolled_file": "speaker_alpha_enroll.wav",
+      "test_file": "speaker_beta_impostor.wav",
+      "claimed_speaker": "speaker_alpha",
+      "target_type": "impostor",
+      "spoof_label": "bona_fide",
+      "attack_type": "none",
+      "source_provenance": "VoxCeleb reference (different speaker)",
+      "expected_decision": "ACCESS_DENIED",
+      "expected_verdict": "IMPOSTOR_HUMAN"
+    }
+  },
+  {
+    "claimed_speaker": "speaker_alpha",
+    "test_file": "speaker_alpha_synthetic_spoof.wav",
+    "enrolled_file": "speaker_alpha_enroll.wav",
+    "decision": "ACCESS_GRANTED",
+    "verdict_type": "TARGET_GENUINE",
+    "speaker_score": 0.4217,
+    "speaker_threshold": 0.35,
+    "speaker_matched": true,
+    "spoof_score": -0.3188,
+    "spoof_threshold": -2.0,
+    "spoof_passed": true,
+    "risk_score": 0.0,
+    "reasons": [
+      "Access Granted: Speaker verified (Cosine 0.422 >= 0.350) and anti-spoof passed (CM -0.319 >= -2.000)."
+    ],
+    "telemetry": {
+      "device": "cuda",
+      "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "ecapa_latency_ms": 37.51,
+      "aasist_latency_ms": 37.96,
+      "total_latency_ms": 117.73,
+      "peak_vram_mb": 278.43
+    },
+    "trial_metadata": {
+      "trial_id": "PILOT-03",
+      "enrolled_speaker_id": "speaker_alpha",
+      "enrolled_file": "speaker_alpha_enroll.wav",
+      "test_file": "speaker_alpha_synthetic_spoof.wav",
+      "claimed_speaker": "speaker_alpha",
+      "target_type": "target",
+      "spoof_label": "spoof",
+      "attack_type": "synthetic_tts_vc",
+      "source_provenance": "Calibrated vocoder/spectral perturbation of Speaker Alpha",
+      "expected_decision": "ACCESS_DENIED",
+      "expected_verdict": "SPOOF_ATTACK"
+    }
+  },
+  {
+    "claimed_speaker": "speaker_alpha",
+    "test_file": "speaker_alpha_replay_spoof.wav",
+    "enrolled_file": "speaker_alpha_enroll.wav",
+    "decision": "ACCESS_DENIED",
+    "verdict_type": "DUAL_FAILURE",
+    "speaker_score": 0.3282,
+    "speaker_threshold": 0.35,
+    "speaker_matched": false,
+    "spoof_score": -11.0287,
+    "spoof_threshold": -2.0,
+    "spoof_passed": false,
+    "risk_score": 0.0,
+    "reasons": [
+      "Dual Failure: Failed speaker threshold (0.328 < 0.350) and failed spoof threshold (-11.029 < -2.000)."
+    ],
+    "telemetry": {
+      "device": "cuda",
+      "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "ecapa_latency_ms": 37.05,
+      "aasist_latency_ms": 35.87,
+      "total_latency_ms": 120.96,
+      "peak_vram_mb": 278.43
+    },
+    "trial_metadata": {
+      "trial_id": "PILOT-04",
+      "enrolled_speaker_id": "speaker_alpha",
+      "enrolled_file": "speaker_alpha_enroll.wav",
+      "test_file": "speaker_alpha_replay_spoof.wav",
+      "claimed_speaker": "speaker_alpha",
+      "target_type": "target",
+      "spoof_label": "spoof",
+      "attack_type": "physical_replay",
+      "source_provenance": "Simulated acoustic room impulse & bandpass loudspeaker replay",
+      "expected_decision": "ACCESS_DENIED",
+      "expected_verdict": "SPOOF_ATTACK"
+    }
+  }
+]

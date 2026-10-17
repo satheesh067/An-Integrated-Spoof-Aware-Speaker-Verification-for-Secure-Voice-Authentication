@@ -1,0 +1,24 @@
+{
+  "username": "sam",
+  "num_recordings": 3,
+  "created_at": "2026-10-12T07:17:43Z",
+  "embedding_dim": 192,
+  "clip_reports": [
+    {
+      "file": "clip_0.wav",
+      "cm_score": -1.0891,
+      "rms": 0.102
+    },
+    {
+      "file": "clip_1.wav",
+      "cm_score": -9.2886,
+      "rms": 0.0896
+    },
+    {
+      "file": "clip_2.wav",
+      "cm_score": -8.8666,
+      "rms": 0.1064
+    }
+  ],
+  "template_file": "data\\enrolled_users\\sam_template.npy"
+}

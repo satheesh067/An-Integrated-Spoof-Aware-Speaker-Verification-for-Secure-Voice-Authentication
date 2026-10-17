@@ -1,0 +1,24 @@
+{
+  "username": "pawan",
+  "num_recordings": 3,
+  "created_at": "2026-10-11T14:54:38Z",
+  "embedding_dim": 192,
+  "clip_reports": [
+    {
+      "file": "clip_0_pawan_sample1.wav",
+      "cm_score": -4.9637,
+      "rms": 0.0858
+    },
+    {
+      "file": "clip_1_pawan_sample2.wav",
+      "cm_score": -6.2726,
+      "rms": 0.123
+    },
+    {
+      "file": "clip_2_pawan_sample3.wav",
+      "cm_score": 1.5718,
+      "rms": 0.0696
+    }
+  ],
+  "template_file": "data\\enrolled_users\\pawan_template.npy"
+}

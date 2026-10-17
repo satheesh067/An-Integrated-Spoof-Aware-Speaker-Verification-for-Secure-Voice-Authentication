@@ -1,0 +1,60 @@
+{
+  "decision": "ACCESS_GRANTED",
+  "verdict_type": "AUTHENTICATED",
+  "claimed_user": "pawan",
+  "fused_score": 3.8929,
+  "fusion_threshold": 0.5052,
+  "speaker_score": 0.557,
+  "speaker_threshold": 0.3237,
+  "speaker_matched": true,
+  "spoof_score": 1.5952,
+  "spoof_threshold": -4.0694,
+  "spoof_passed": true,
+  "challenge_status": {
+    "passed": true,
+    "target_phrase": "pure park 56",
+    "transcription": "Pure Park 56.",
+    "word_match_pct": 100.0,
+    "number_matched": true,
+    "matched_words": [
+      "pure",
+      "park",
+      "56"
+    ],
+    "missing_words": [],
+    "asr_latency_ms": 1419.12,
+    "asr_model": "small.en",
+    "asr_decoding": "beam5_temperature0_fp32",
+    "reason": "Challenge passed: Spoken phrase and security number verified."
+  },
+  "reasons": [
+    "Authentication successful: Fused SASV decision score (3.893) meets operational threshold (0.505). [ASV similarity: 0.557, CM score: 1.595]"
+  ],
+  "telemetry": {
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "calibration_status": "EXPERIMENTAL_PILOT_ONLY",
+    "calibration_source": "experimental_pilot_live_audio",
+    "ecapa_latency_ms": 91.5,
+    "aasist_latency_ms": 167.64,
+    "asr_latency_ms": 1419.12,
+    "total_latency_ms": 1681.76,
+    "peak_vram_mb": 1064.01,
+    "audio_metadata": {
+      "original_sr": 16000,
+      "target_sr": 16000,
+      "duration_sec": 3.41,
+      "rms_energy": 0.0199,
+      "peak_amplitude": 0.265,
+      "is_clipped": false,
+      "sample_rate": 16000,
+      "duration_seconds": 3.41,
+      "preprocessing": "mono_16khz_peak_0.95_v1",
+      "normalization_gain": 3.5847075080608013
+    }
+  },
+  "calibration_status": "EXPERIMENTAL_PILOT_ONLY",
+  "calibration_source": "experimental_pilot_live_audio",
+  "saved_probe_path": "D:\\S_NLP\\Integrated Spoof-Aware Speaker Verification for Secure Voice Authentication\\data\\voices\\testing\\pawan\\pawan_test_20261011_231057_ACCESS_GRANTED.wav",
+  "enforced_policy": "strict_security"
+}

@@ -1,0 +1,60 @@
+{
+  "decision": "ACCESS_DENIED",
+  "verdict_type": "SPEAKER_MISMATCH",
+  "claimed_user": "satheesh",
+  "fused_score": -1.5099,
+  "fusion_threshold": 0.5052,
+  "speaker_score": 0.1871,
+  "speaker_threshold": 0.3237,
+  "speaker_matched": false,
+  "spoof_score": -2.3349,
+  "spoof_threshold": -4.0694,
+  "spoof_passed": true,
+  "challenge_status": {
+    "passed": true,
+    "target_phrase": "pure book 33",
+    "transcription": "Pure Book 33.",
+    "word_match_pct": 100.0,
+    "number_matched": true,
+    "matched_words": [
+      "pure",
+      "book",
+      "33"
+    ],
+    "missing_words": [],
+    "asr_latency_ms": 766.96,
+    "asr_model": "small.en",
+    "asr_decoding": "beam5_temperature0_fp32",
+    "reason": "Challenge passed: Spoken phrase and security number verified."
+  },
+  "reasons": [
+    "Speaker identity mismatch: Anti-spoof check passed (CM: -2.335 >= -4.069), but voiceprint similarity fell below threshold (0.187 < 0.324)."
+  ],
+  "telemetry": {
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "calibration_status": "EXPERIMENTAL_PILOT_ONLY",
+    "calibration_source": "experimental_pilot_live_audio",
+    "ecapa_latency_ms": 41.5,
+    "aasist_latency_ms": 20.78,
+    "asr_latency_ms": 766.96,
+    "total_latency_ms": 832.06,
+    "peak_vram_mb": 1074.06,
+    "audio_metadata": {
+      "original_sr": 16000,
+      "target_sr": 16000,
+      "duration_sec": 4.35,
+      "rms_energy": 0.0136,
+      "peak_amplitude": 0.166,
+      "is_clipped": false,
+      "sample_rate": 16000,
+      "duration_seconds": 4.35,
+      "preprocessing": "mono_16khz_peak_0.95_v1",
+      "normalization_gain": 5.724457521147481
+    }
+  },
+  "calibration_status": "EXPERIMENTAL_PILOT_ONLY",
+  "calibration_source": "experimental_pilot_live_audio",
+  "saved_probe_path": "D:\\S_NLP\\Integrated Spoof-Aware Speaker Verification for Secure Voice Authentication\\data\\voices\\testing\\satheesh\\satheesh_test_20261011_230528_ACCESS_DENIED.wav",
+  "enforced_policy": "strict_security"
+}

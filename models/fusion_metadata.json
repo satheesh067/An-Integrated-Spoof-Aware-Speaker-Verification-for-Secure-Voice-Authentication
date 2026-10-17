@@ -1,0 +1,19 @@
+{
+  "dataset": "SASV 2022 Development Set",
+  "num_trials": 29548,
+  "target_trials": 1484,
+  "nontarget_trials": 5768,
+  "spoof_trials": 22296,
+  "weights": {
+    "w_asv": 5.7397942543029785,
+    "w_cm": 0.2297351360321045,
+    "bias": -4.423347473144531
+  },
+  "dev_metrics": {
+    "sasv_eer_pct": 2.089,
+    "sv_eer_pct": 3.437,
+    "spf_eer_pct": 0.404,
+    "eer_threshold": 0.7233,
+    "strict_security_threshold": 1.361
+  }
+}

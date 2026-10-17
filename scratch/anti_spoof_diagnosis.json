@@ -1,0 +1,65 @@
+[
+  {
+    "file": "data\\voices\\testing\\pawan\\pawan_test_20261011_225024_ACCESS_DENIED.wav",
+    "rate": 16000,
+    "duration": 3.6693125,
+    "rms": 0.015501191839575768,
+    "peak": 0.20233154296875,
+    "raw_cm": -8.8592,
+    "normalized_cm": -5.8763
+  },
+  {
+    "file": "data\\voices\\testing\\pawan\\pawan_test_20261011_224833_ACCESS_DENIED.wav",
+    "rate": 16000,
+    "duration": 3.4133125,
+    "rms": 0.024574365466833115,
+    "peak": 0.1995849609375,
+    "raw_cm": -9.3665,
+    "normalized_cm": -6.1201
+  },
+  {
+    "file": "data\\voices\\enrolled\\pawan\\pawan_enroll_20261011_202435_0.wav",
+    "rate": 16000,
+    "duration": 4.0,
+    "rms": 0.08577350527048111,
+    "peak": 0.79345703125,
+    "raw_cm": -4.0894,
+    "normalized_cm": -4.9632
+  },
+  {
+    "file": "data\\voices\\enrolled\\pawan\\pawan_enroll_20261011_202435_1.wav",
+    "rate": 16000,
+    "duration": 4.0,
+    "rms": 0.12302937358617783,
+    "peak": 0.79345703125,
+    "raw_cm": -5.4587,
+    "normalized_cm": -6.2716
+  },
+  {
+    "file": "data\\voices\\enrolled\\pawan\\pawan_enroll_20261011_202435_2.wav",
+    "rate": 16000,
+    "duration": 4.0,
+    "rms": 0.06955930590629578,
+    "peak": 0.79345703125,
+    "raw_cm": 1.751,
+    "normalized_cm": 1.5718
+  },
+  {
+    "file": "data\\pilot\\audio\\speaker_alpha_replay_spoof.wav",
+    "rate": 16000,
+    "duration": 1.6304375,
+    "rms": 0.17265748977661133,
+    "peak": 0.89996337890625,
+    "raw_cm": -10.8459,
+    "normalized_cm": -11.0282
+  },
+  {
+    "file": "data\\pilot\\audio\\speaker_alpha_synthetic_spoof.wav",
+    "rate": 16000,
+    "duration": 1.6304375,
+    "rms": 0.013405408710241318,
+    "peak": 0.0611572265625,
+    "raw_cm": -4.2327,
+    "normalized_cm": -0.3189
+  }
+]
