@@ -81,6 +81,8 @@ app.add_middleware(
 # Serve the browser workspace on the same origin as the API. Keep the
 # existing JSON root endpoint available for API clients.
 FRONTEND_DIR = PROJECT_ROOT / "frontend"
+if not FRONTEND_DIR.exists():
+    FRONTEND_DIR = PROJECT_ROOT.parent / "frontend"
 if FRONTEND_DIR.exists():
     app.mount("/ui", StaticFiles(directory=str(FRONTEND_DIR), html=True), name="ui")
 

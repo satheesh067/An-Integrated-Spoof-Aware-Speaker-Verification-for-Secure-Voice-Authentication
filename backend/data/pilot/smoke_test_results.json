@@ -4,7 +4,7 @@
     "test_file": "speaker_alpha_genuine.wav",
     "enrolled_file": "speaker_alpha_enroll.wav",
     "decision": "ACCESS_GRANTED",
-    "verdict_type": "TARGET_GENUINE",
+    "verdict_type": "AUTHENTICATED",
     "speaker_score": 0.3963,
     "speaker_threshold": 0.35,
     "speaker_matched": true,
@@ -18,9 +18,9 @@
     "telemetry": {
       "device": "cuda",
       "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
-      "ecapa_latency_ms": 21.77,
-      "aasist_latency_ms": 391.88,
-      "total_latency_ms": 1705.18,
+      "ecapa_latency_ms": 26.71,
+      "aasist_latency_ms": 301.28,
+      "total_latency_ms": 1796.64,
       "peak_vram_mb": 278.43
     },
     "trial_metadata": {
@@ -42,7 +42,7 @@
     "test_file": "speaker_beta_impostor.wav",
     "enrolled_file": "speaker_alpha_enroll.wav",
     "decision": "ACCESS_DENIED",
-    "verdict_type": "DUAL_FAILURE",
+    "verdict_type": "DUAL_CRITERIA_FAILURE",
     "speaker_score": 0.2215,
     "speaker_threshold": 0.35,
     "speaker_matched": false,
@@ -56,9 +56,9 @@
     "telemetry": {
       "device": "cuda",
       "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
-      "ecapa_latency_ms": 22.83,
-      "aasist_latency_ms": 31.8,
-      "total_latency_ms": 83.18,
+      "ecapa_latency_ms": 42.34,
+      "aasist_latency_ms": 36.67,
+      "total_latency_ms": 110.99,
       "peak_vram_mb": 278.43
     },
     "trial_metadata": {
@@ -80,7 +80,7 @@
     "test_file": "speaker_alpha_synthetic_spoof.wav",
     "enrolled_file": "speaker_alpha_enroll.wav",
     "decision": "ACCESS_GRANTED",
-    "verdict_type": "TARGET_GENUINE",
+    "verdict_type": "AUTHENTICATED",
     "speaker_score": 0.4217,
     "speaker_threshold": 0.35,
     "speaker_matched": true,
@@ -94,9 +94,9 @@
     "telemetry": {
       "device": "cuda",
       "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
-      "ecapa_latency_ms": 37.51,
-      "aasist_latency_ms": 37.96,
-      "total_latency_ms": 117.73,
+      "ecapa_latency_ms": 29.48,
+      "aasist_latency_ms": 29.1,
+      "total_latency_ms": 115.39,
       "peak_vram_mb": 278.43
     },
     "trial_metadata": {
@@ -118,7 +118,7 @@
     "test_file": "speaker_alpha_replay_spoof.wav",
     "enrolled_file": "speaker_alpha_enroll.wav",
     "decision": "ACCESS_DENIED",
-    "verdict_type": "DUAL_FAILURE",
+    "verdict_type": "DUAL_CRITERIA_FAILURE",
     "speaker_score": 0.3282,
     "speaker_threshold": 0.35,
     "speaker_matched": false,
@@ -132,9 +132,9 @@
     "telemetry": {
       "device": "cuda",
       "device_name": "NVIDIA GeForce RTX 3050 Laptop GPU",
-      "ecapa_latency_ms": 37.05,
-      "aasist_latency_ms": 35.87,
-      "total_latency_ms": 120.96,
+      "ecapa_latency_ms": 28.09,
+      "aasist_latency_ms": 28.13,
+      "total_latency_ms": 97.33,
       "peak_vram_mb": 278.43
     },
     "trial_metadata": {

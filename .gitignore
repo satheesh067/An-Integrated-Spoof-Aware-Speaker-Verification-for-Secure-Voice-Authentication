@@ -22,13 +22,13 @@ Thumbs.db
 *.log
 *.backup
 *.bak
-scratch/*.log
+**/scratch/*.log
 
 # Large external models & checkpoints
-models/checkpoints/ecapa_local/
+**/models/checkpoints/ecapa_local/
 
 # External baseline challenge repository and large embeddings
-data/sasv_baseline/
+**/data/sasv_baseline/
 
 # Scratch UI references
-scratch/ui-reference/
+**/scratch/ui-reference/
