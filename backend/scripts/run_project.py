@@ -11,8 +11,11 @@ sys.path.insert(0, str(ROOT))
 os.environ.setdefault("HF_HUB_DISABLE_XET", "1")
 
 # Use the system's trusted CA store, retaining normal certificate validation.
-import truststore
-truststore.inject_into_ssl()
+try:
+    import truststore
+    truststore.inject_into_ssl()
+except Exception:
+    pass
 
 import uvicorn
 from src.api import server
@@ -30,4 +33,6 @@ if __name__ == "__main__":
         pipeline.challenge.whisper_model
         server.MODELS_READY = True
         print("All speech models loaded. VoiceGuard is ready.", flush=True)
-    uvicorn.run(server.app, host="127.0.0.1", port=8000, ws="none")
+    host = os.getenv("HOST", "0.0.0.0")
+    port = int(os.getenv("PORT", "8000"))
+    uvicorn.run(server.app, host=host, port=port, ws="none")
